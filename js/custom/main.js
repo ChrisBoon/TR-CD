@@ -19,13 +19,13 @@ $(document).ready(function(){
 		toggleState: function(){
 			var current = localStorage[this.key];
 			if( current === "open"){
-				localStorage[this.key] = "closed";
 				$els.body.addClass("-js-sidebar-closed");
+				localStorage[this.key] = "closed";
 				console.log(localStorage[this.key]);
 			}
 			else if( current === "closed"){
-				localStorage[this.key] = "open";
 				$els.body.removeClass("-js-sidebar-closed");
+				localStorage[this.key] = "open";
 				console.log(localStorage[this.key]);
 			}
 			else{
@@ -33,18 +33,21 @@ $(document).ready(function(){
 			}
 		},
 		setStateTrue: function(){
-			localStorage[this.key] = 'open';
 			$els.body.removeClass("-js-sidebar-closed");
+			localStorage[this.key] = 'open';
 		},
 		setStateFalse: function(){
-			localStorage[this.key] = 'closed';
 			$els.body.addClass("-js-sidebar-closed");
+			localStorage[this.key] = 'closed';
 		},
 
 		getState: function(){
 			return localStorage[this.key];
 		},
 		init: function(){
+			if ($els.body.data("suppresssidebar") == true) {
+				this.setStateFalse();
+			}
 			if (window.localStorage) { // checks if browser support localStorage
 				this.canHas = true;
 				
