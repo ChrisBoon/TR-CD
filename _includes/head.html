@@ -21,9 +21,5 @@
 		<![endif]-->
 	</head>
 
-{% if page.suppressSidebar %}
-	<body data-suppresssidebar=true>
-{% else %}
-	<body>
-{% endif %}
+	<body class="-js-sidebar-closed">
 	{% include sidebar.html %}
