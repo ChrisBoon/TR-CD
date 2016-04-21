@@ -154,7 +154,8 @@ body {
   padding-right: 16px; }
 
 .app__container {
-  margin-left: 300px; }
+  margin-left: 300px;
+  transition: margin 0.2s; }
   .-js-sidebar-closed .app__container {
     margin-left: 0; }
 
@@ -165,7 +166,8 @@ body {
   top: 0;
   bottom: 0;
   left: 0;
-  border-right: 1px solid #ccc; }
+  border-right: 1px solid #ccc;
+  transition: transform 0.2s; }
   .-js-sidebar-closed .sidebar {
     transform: translateX(-300px); }
 

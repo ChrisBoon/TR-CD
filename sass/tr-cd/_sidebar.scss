@@ -6,6 +6,7 @@
 	bottom: 0;
 	left: 0;
 	border-right: 1px solid $c-eltny-line;
+	transition: transform 0.2s;
 	.-js-sidebar-closed &{
 		transform: translateX(-300px);
 	}

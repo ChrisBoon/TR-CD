@@ -11,6 +11,7 @@ body{
 
 .app__container{
 	margin-left: $sidebar-width;
+	transition: margin 0.2s;
 	.-js-sidebar-closed &{
 		margin-left: 0;
 	}
