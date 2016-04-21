@@ -1,0 +1,23 @@
+.file-list{
+	@include card($padding:0);
+	margin-top: $unit*2;
+}
+
+.file-list__item{
+	&:not(:last-child){
+		border-bottom: 1px solid $c-eltny-line;
+	}
+}
+
+.file-list__link{
+	@include cardListHover;
+	display: block;
+	padding: $unit;
+}
+
+.file-list__icon{
+	@include filetype;
+    vertical-align: top;
+	display: inline-block;
+	margin-right: $unit;
+}

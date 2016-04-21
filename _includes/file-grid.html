@@ -1,0 +1,22 @@
+<div class="file-grid">
+  	<ul>
+		{% for file in page.fileList%}
+  		<li class="file-grid__item">
+	  		{% if file.fileType == "folder" %}
+	  		<a href="structure/{{file.link}}" class="file-grid__link file-grid__link--{{file.fileType}}">
+	  		{% else %}
+	  		<a href="assets/{{file.link}}" class="file-grid__link file-grid-link__{{file.fileType}}">
+			{% endif %}
+			
+			{% if file.fileThumbnail %}
+	  			<span class="file-grid__icon file-grid__icon--{{ file.fileType }}"></span>
+  			{% else %}
+	  			<span class="file-grid__icon file-grid__icon--{{ file.fileType }}"></span>
+			{% endif %}
+	  			<span class="file-grid__name">{{file.name}}</span>
+  			</a>
+  		</li>
+  		{% endfor %}
+  	</ul>
+  </div>
+

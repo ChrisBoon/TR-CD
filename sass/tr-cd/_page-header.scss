@@ -1,0 +1,40 @@
+.content-view-header{
+	background-color: #fff;
+	flex: 0 0 auto;
+	padding: $unit*2 0;
+	>.container{
+		display: flex;
+		align-items: stretch;
+	}
+	&-text{
+		flex: 1 1 auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+}
+
+.view-icon-holder{
+	flex: 0 0 auto;
+	padding-right: $unit*2;
+	display: flex;
+	align-items: center;
+	img{
+		display: block;
+		width: $unit*8;
+		height: $unit*8;
+		@include media-regUp{
+			width: $unit*12;
+			height: $unit*12;
+		}
+	}
+}
+
+.content-view-heading-main{
+	@include pageHeadingLight;
+}
+
+.content-view-page-desc{
+	@include paragraph;
+	@include textExplain;
+}

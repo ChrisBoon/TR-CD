@@ -1,0 +1,61 @@
+.browse-by-section{
+	margin-top: $unit*4;
+}
+.browse-by-list{
+	display: flex;
+	@include media-regDown{
+		flex-direction: column;
+	}
+}
+.browse-by-list-item{
+	@include card($padding:0);
+	@include card-hover;
+	display: flex;
+	flex-direction: column;
+
+	@include media-regUp{
+		@include thumb-grid(3,16); //assumes 3 items -other courses may have more or less so may want to rewrite using flexbox, min and max sizes, and media queries.
+		.browse-by-text{
+			margin-top: $unit;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+	@include media-regDown{
+		&:not(:first-child){
+			margin-top: $unit*2;
+		}
+	}
+	a{
+		padding:$unit*2;
+		display: flex;
+		flex: 1 1 auto;
+		flex-direction: column;
+		align-items: center;
+		@include media-regDown{
+			flex-direction: row;
+
+		}
+	}
+}
+.browse-by-text h1{
+	@include itemHeading;
+}
+
+.browse-by-icon{
+	width: 100%;
+	max-width: $unit*24;
+	height: auto;
+	border-radius:50%;
+	@include media-regDown{
+		max-width: $unit*10;
+		margin-right: $unit*2;
+	}
+}
+.browse-by-description{
+	@include textExplain;
+	@include media-regUp{
+		text-align: center;
+	}
+}

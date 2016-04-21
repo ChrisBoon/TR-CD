@@ -1,11 +1,10 @@
- {% include header.html %}
- <div class="left">
- 	<h1>{{ page.title }}</h1>
-    <p class="muted">{{ page.date }}</p>
-	{{ content }}
-	
- </div>
-<div class="right">
-{% include sidebar.html %}	
+{% include head.html %}
+{% include header.html %}
+
+{% include page-header.html %}
+
+{{ content }}
+<div class="container">
+	{% include file-list.html %}
 </div>
- {% include footer.html %}
+{% include footer.html %}

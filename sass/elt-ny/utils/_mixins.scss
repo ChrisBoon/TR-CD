@@ -1,0 +1,210 @@
+//when using bg-image to replace text. Consider renaming to 'bg-image-text-replace' in in future release.
+@mixin text-replace{
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+//shortcut for adding decorative pseudo element:
+//assumes element will be absolutely positioned. Consider renaming to 'before-absolute' in future release.
+@mixin before(){
+  position: relative;
+  &:before{
+    position: absolute;
+    display: block;
+    content: " ";
+    @content;
+  }
+}
+
+
+//switch from subpixel to full pixel smoothing in webkit - note this makes text too thin usually but can make white text on dark backgrounds look better at large sizes or bold weights:
+@mixin smooth-text{
+  -webkit-font-smoothing: antialiased;
+}
+
+//prevent text selection. Useful for clickable elements. Without this if you double tap on a UI element you can trigger actions in browsers - such as looking up text in Chrome.
+//also useful if you need to stop certain elements getting selected if a user hits ctrl/cmd+ a to select all text. Eg they probably want content text not UI elements.
+@mixin user-select-none{
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+//prevent tap highlight on touch devices:
+@mixin no-tap-color{
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent;
+}
+
+//to add smooth scrolling in iOS to overflow elements:
+//in v0.1 this was called
+@mixin ios-scroll{
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+@mixin scroll{
+  @warn " 'scroll' mixin is deprecated. Use 'ios-scroll' instead.";
+  @include ios-scroll;
+}
+
+//hover only on .no-touch (means modernizr is required or no hover states will ever appear)
+//may be less useful as more browsers implement touch and more devices are touch and pointer.
+//wish :touch was a separate state and :hover only worked with a hoverable device
+@mixin hover(){
+  .no-touch &:not(.active):hover{
+    cursor: pointer;
+    @content;
+  }
+}
+
+//media queries
+//technically 'less than' is 'less than or equal to', as is 'more than'. Consider renaming these in a future version.
+//Note it's best not to call these mixins directly in a project.
+//Rather when you need a breakpoint make a mixin in the media queries scss fie that calls one of these mixins and passes a value.
+//That way you will easily be able to tweak them and are less likely to make random decisions and introduce more breakpoints than needed.
+@mixin mq-lessthan ($lt){
+  @media (max-width: $lt ){
+    @content;
+  }
+}
+@mixin mq-between ($mt,$lt ){
+  @media (min-width: $mt ) and (max-width: $lt ){
+    @content;
+  }
+}
+@mixin mq-morethan ($mt){
+  @media ( min-width:  $mt + 1 ){
+    @content;
+  }
+}
+@mixin mq-exact (){
+  @media ( width:  1200px ){
+    @content;
+  }
+}
+@mixin mq-morethanHeight ($mt){
+  @media ( min-height:  $mt + 1 ){
+    @content;
+  }
+}
+
+//basic transition
+//probably don't use this as it could lead to unexpected consequences.
+//generally better to specify transition values. Maybe just use a variable to inplement a 'standard' timing value.
+@mixin transitionAll{ transition: all 0.2s;}
+
+
+
+//z-index stuff.
+//always use the function rather than specifying directly in scss. Makes it easier to make adjustments and track values.
+//Remember if you need more than 3 layers for z-index you're probably doing it wrong.
+@function z($layer) {
+  @if not map-has-key($z-layers, $layer) {
+    @warn "No layer found for `#{$layer}` in $z-layers map. Property omitted.";
+  }
+ 
+  @return map-get($z-layers, $layer);
+}
+$z-layers: (
+  "1":1,
+  "2":2,
+  "3":3,
+  "below":-1
+);
+
+//use to change styling depending on context relative to a parent. only use of absolutely needed for clarity of scss.
+//example:
+//a{
+//  color: green;
+//  span{ 
+//    color: red;
+//    @include context('a','a:hover'){
+//      color: blue;
+//    }
+//  }
+//}
+//generally better to do this:
+//a{
+//  color: green;
+//  span{ 
+//    color: red;
+//  }
+//  &:hover span{
+//    color: blue;
+//  }
+//}
+@mixin context($old-context, $new-context) {
+  @at-root #{selector-replace(&, $old-context, $new-context)} {
+    @content;
+  }
+}
+
+
+
+//mixin to create a grid for thumbnails where width is maximum percentage to fill parent and gap is a pixel value (requires calc and border-box):
+
+//takes up to 3 parameters: number of columns (required), gap size in px (required), and whether left or right aligned (optional)
+@mixin thumb-grid($col,$gap,$align:left){
+  //number of spaces between columns is columns minus one:
+  $spaces: ( $col - 1);
+  //this is the number of pixels in total that need removing from 100% to get the gaps:
+  $totalSpace: $spaces * $gap;
+  //get gapless width by dividing 100 by number of columns then find out how much to reduce by dividing the total space required for gaps by the number of columns:
+  width: calc( #{100 / $col}% - #{$totalSpace / $col}px);
+  //set margin top on all thumbs to size of gap:
+  margin-top: #{$gap}px;
+  //set margin to left or right of each thumb to size of gap:
+  margin-#{$align}: #{$gap}px;
+  //use border-box model in case we wish to add padding to thumb:
+  box-sizing: border-box;
+  //remove margin from side of row of thumbs at the aligned edge:
+  &:nth-child(#{$col}n-#{$spaces}){
+    margin-#{$align}: 0;
+  }
+  //remove margin-top from top row of thumbs:
+  &:nth-child(-n+#{$col}){
+    margin-top: 0;
+  }
+  // * Consider refactoring margin rules to use :not selector rather than overwriting back to 0.
+}
+
+//use this if using icon fonts. First check you really need icon fonts - SVG icons are better for most uses.
+@mixin icon-font{
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+//if using Angular-animate add this to elements that should transition on hover but not be effected by Angular animation.
+//eg if you have a hover effect on a button but you are changing the button's apeearance on view change Angular-animate
+//will attempt to transition that change based on the hover transition time. Adding this will prevent it.
+@mixin ng-no-animate{
+  &.ng-animate{
+    transition: none;
+  }
+}
+
+//example of a mixin for providing course-specific css in a project:
+@mixin OPD{
+  @at-root .product-OPD &{
+    @content;
+  }
+}
+
+//clearfix: IE8 and up:
+@mixin clearfix{
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

@@ -1,0 +1,19 @@
+<div class="content-view-header">
+	<div class="container">
+		
+		{% if page.icon %}
+		<div class="view-icon-holder">
+			<img src="{{page.icon}}" alt="">
+		</div>
+		{% endif %}
+		
+		<div class="content-view-header-text">
+			<h1 class="content-view-heading-main">{{ page.title }}</h1>
+			
+			{% if page.description %}
+			<p class="content-view-page-desc">{{ page.description}}</p>
+			{% endif %}
+		</div>
+
+	</div>
+</div>

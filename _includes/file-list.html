@@ -1,0 +1,17 @@
+<div class="file-list">
+  	<ul>
+		{% for file in page.fileList%}
+  		<li class="file-list__item">
+	  		{% if file.fileType == "folder" %}
+	  		<a href="structure/{{file.link}}" class="file-list__link file-list__link--{{file.fileType}}">
+	  		{% else %}
+	  		<a href="assets/{{file.link}}" class="file-list__link file-list-link__{{file.fileType}}">
+			{% endif %}
+	  			<span class="file-list__icon file-list__icon--{{ file.fileType }}"></span>
+	  			<span class="file-list__name">{{file.name}}</span>
+  			</a>
+  		</li>
+  		{% endfor %}
+  	</ul>
+  </div>
+

@@ -1,0 +1,17 @@
+body{
+	background: $c-eltny-bg;
+	// position: relative;
+}
+.container{
+	max-width: $unit*140;
+	margin: 0 auto;
+	padding-left: $unit*2;
+	padding-right: $unit*2;
+}
+
+.app__container{
+	margin-left: $sidebar-width;
+	.-js-sidebar-closed &{
+		margin-left: 0;
+	}
+}

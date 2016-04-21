@@ -1,0 +1,61 @@
+@mixin textExplain{
+	color: $c-eltny-light-text;
+}
+
+@mixin itemHeading{
+	font-weight: 600;
+	font-size: 1.1em;
+}
+@mixin itemHeadingLight{
+	font-weight: 400;
+	font-size: 1.1em;
+}
+
+@mixin pageHeadingLight{
+	font-weight: 400;
+	font-size: 1.2em;
+}
+
+@mixin paragraph{
+	max-width: 50rem;
+	@include media-large(){
+		max-width: 52rem;
+	}
+}
+
+@mixin labelUIText {
+	font-weight: 600;
+}
+
+@mixin footerText{
+	font-size: 0.8em;
+	color: $c-eltny-light-text;
+}
+@mixin decorativeText{
+	font-size: 1.6em;
+}
+
+@mixin smallUiText{
+	//only to be used on nonessesntial UI elements.
+	font-size:0.8em;
+}
+
+@mixin intro-line{
+	font-size: 1.4em;
+	line-height: 1.3;
+	margin-bottom: 0.5em;
+}
+
+@mixin link-external{
+	color: $c-link-external;
+	text-decoration: underline;
+}
+
+html{
+  font-family: $base-font-stack;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  color: $base-text-color;
+}
+
+

@@ -1,12 +1,12 @@
-name: "jekyll"
+name: "Everybody Up 2nd Edition Teacher Resources"
 description: "first attempt"
 source:      ./
 destination: ./_site
 exclude: [.sass-cache,node_modules,sass,package.json,gruntfile.js,images-src,js/libs,js/custom,js/build,readme.md]
 encoding: utf-8
-paginate: 2
-paginate_path: "blog/:num"
-permalink: blog/:month-:day-:year/:title.html
+paginate: 10
+paginate_path: "structure/:num"
+permalink: structure/:title.html
 excerpt_separator: <!--more-->
 gems: [jekyll-paginate]
 
@@ -14,5 +14,10 @@ defaults:
   -
     scope:
       path: "blog"
+    values:
+      layout: "posts"
+  -
+    scope:
+      path: "structure"
     values:
       layout: "posts"

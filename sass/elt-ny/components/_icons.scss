@@ -1,0 +1,55 @@
+@mixin fa-arrow-circle-right($size: 16px){
+	&:after{
+		content: "";
+		display: inline-block;
+		width: $size;
+		height: $size;
+		background-image: url('../images/icon-goto-arrow.svg');
+		background-size: $size;
+		color: #666;
+		margin-left: 0.5em;
+		transform: translate(0, $size/8);
+	}	
+}
+
+
+@mixin badge($type: 'new'){
+	&:after{
+		display: inline-block;
+		color: #fff;
+		border-radius: 4px;
+		font-weight: 400;
+		font-size: 0.75rem;
+		line-height: 1;
+		margin-left: 0.75em;
+		margin-top: 0.5em;
+		padding: 0.25em 1em;
+		text-transform: uppercase;
+		vertical-align: top;
+		letter-spacing: 0.05em;
+		@if ($type == 'new'){
+			content:"new";
+			background-color: $c-new;
+		}
+		@if ($type == 'updated'){
+			content:"updated";
+			background-color: $c-updated;
+		}
+	}
+
+
+}
+
+//filetypes list may be better separated out of mixin for easier updating.
+@mixin filetype($thisSize: $unit*3){
+	width: $thisSize;
+	height: $thisSize;
+	background-size: contain;
+
+	$filetypes: "audio-sheet", "audio", "doc", "folder", "image", "pdf", "pdf-and-doc", "presentation", "sheet", "video-sheet",  "video", "zip";
+	@each $type in $filetypes{
+	    &--#{$type}{
+		    background-image: url('../images/icon-filetype-#{$type}.svg');
+		}
+	}
+}
