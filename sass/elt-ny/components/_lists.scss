@@ -1,0 +1,21 @@
+@mixin list-item-divider($position){
+	@if $position == 'top'{
+		&:not(:first-child){
+			border-top: 1px solid $c-eltny-line;
+		}				
+	}
+	@else if $position == 'bottom'{
+		&:not(:last-child){
+			border-bottom: 1px solid $c-eltny-line;
+		}		
+	}
+	@else{
+		@error "list-item-divider requires argument to be either 'top' or 'bottom'";
+	}
+
+}
+
+@mixin list-link-basic{
+	display: block;
+	padding: $unit;
+}

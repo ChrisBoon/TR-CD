@@ -4,28 +4,33 @@
 	background-color: $c-tr-cd-placeholder-1;
 	color: #fff;
 }
-.app__header__title{
-	line-height: $unit *5;
-  float: left;
-}
-.app__header .sidebar-toggle{
+
+.sidebar-activate{
   @include user-select-none;
   @include no-tap-color;
   cursor: pointer;
+
+}
+
+.app__header__title{
+	line-height: $unit *5;
+  float: left;
+  padding: 0 $unit;
+}
+.sidebar-toggle{
   width: $unit*5;
   height: $unit*5;
   border-radius: 50%;
   position: relative;
   float: left;
   transition: background 0.2s;
-  margin-right: $unit;
   &:hover,
   &:focus{
     background-color:rgba(0,0,0,0.2);
   }
 }
 
-.app__header .hamburger-menu{
+.hamburger-menu{
     $lineWidth: 2px;
     $lineLength: $unit*3;
     $headerHeight:$unit*5;

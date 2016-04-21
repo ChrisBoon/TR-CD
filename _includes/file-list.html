@@ -1,6 +1,21 @@
 <div class="file-list">
+
+	{% if include.fileList == 'pageList' %}
   	<ul>
-		{% for file in page.fileList%}
+		{% for file in site.data.pageList%}
+			{% if file[1].includeOnHome == true %}
+		  		<li class="file-list__item">
+			  		<a href="structure/{{file[1].link}}" class="file-list__link">
+			  			<span class="file-list__icon file-list__icon--folder"></span>
+			  			<span class="file-list__name">{{file[1].name}}</span>
+		  			</a>
+		  		</li>
+	  		{% endif %}
+  		{% endfor %}
+  	</ul>
+	{% else %}
+  	<ul>
+		{% for file in site.data.pageList[include.fileList].files%}
   		<li class="file-list__item">
 	  		{% if file.fileType == "folder" %}
 	  		<a href="structure/{{file.link}}" class="file-list__link file-list__link--{{file.fileType}}">
@@ -13,5 +28,6 @@
   		</li>
   		{% endfor %}
   	</ul>
+  	{% endif %}
   </div>
 

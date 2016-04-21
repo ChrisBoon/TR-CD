@@ -11,3 +11,26 @@
 		transform: translateX(-300px);
 	}
 }
+.sidebar-nav{
+
+}
+.sidebar-nav__li{
+	&--1{
+		@include list-item-divider(top);
+		
+	}
+	&--2{
+
+	}
+}
+.sidebar-nav__link{
+	@include list-link-basic;
+	&--1{
+		@include heavyLink;
+	}
+	&--2{
+		@include lightLink;
+	}
+}
+
+

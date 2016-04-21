@@ -4,7 +4,9 @@
 {% include page-header.html %}
 
 {{ content }}
+
+
 <div class="container">
-	{% include file-list.html %}
+	{% include file-list.html fileList = page.list%}
 </div>
 {% include footer.html %}

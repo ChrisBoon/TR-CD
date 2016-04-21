@@ -1,7 +1,12 @@
 @mixin textExplain{
 	color: $c-eltny-light-text;
 }
-
+@mixin lightLink{
+	color: $c-eltny-light-text;
+}
+@mixin heavyLink{
+	font-weight: 600;
+}
 @mixin itemHeading{
 	font-weight: 600;
 	font-size: 1.1em;

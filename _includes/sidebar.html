@@ -1,7 +1,10 @@
 <div class="sidebar">
-	<ul>
-	  {% for post in site.posts%}
-	    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+	<ul class="sidebar-nav">
+	  {% for page in site.data.pageList%}
+	    <li class="sidebar-nav__li sidebar-nav__li--{{page[1].hierarchy}}">
+	    	<a class="sidebar-nav__link sidebar-nav__link--{{page[1].hierarchy}}" 
+	    		href="{% if page[1].special == null %}structure/{% endif %}{{ page[1].link }}">{{ page[1].name }}</a>
+	    	</li>
 	  {% endfor %}
 	</ul>
 </div>

@@ -1,12 +1,11 @@
----
-tmpl: tests
----
 {% include head.html %}
 {% include header.html %}
 
 {{ content }}
-<div class="container">
-	{% include file-grid.html %}
+<div class="color-container">
+	<div class="container">
+		{% include file-list.html fileList = page.list%}
+	</div>
 </div>
 {% include footer.html %}
 {{template.tmpl}}

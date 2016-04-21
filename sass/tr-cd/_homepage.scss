@@ -1,21 +1,21 @@
-.browse-by-section{
+.homepage-links{
 	margin-top: $unit*4;
 }
-.browse-by-list{
+.homepage-links__list{
 	display: flex;
 	@include media-regDown{
 		flex-direction: column;
 	}
 }
-.browse-by-list-item{
+.homepage-links__item{
 	@include card($padding:0);
 	@include card-hover;
 	display: flex;
 	flex-direction: column;
 
 	@include media-regUp{
-		@include thumb-grid(3,16); //assumes 3 items -other courses may have more or less so may want to rewrite using flexbox, min and max sizes, and media queries.
-		.browse-by-text{
+		@include thumb-grid(5,16); //assumes 3 items -other courses may have more or less so may want to rewrite using flexbox, min and max sizes, and media queries.
+		.homepage-links__text{
 			margin-top: $unit;
 			display: flex;
 			flex-direction: column;
@@ -27,23 +27,25 @@
 			margin-top: $unit*2;
 		}
 	}
-	a{
-		padding:$unit*2;
-		display: flex;
-		flex: 1 1 auto;
-		flex-direction: column;
-		align-items: center;
-		@include media-regDown{
-			flex-direction: row;
 
-		}
+}
+.homepage-links__link{
+	padding:$unit*2;
+	display: flex;
+	flex: 1 1 auto;
+	flex-direction: column;
+	align-items: center;
+	@include media-regDown{
+		flex-direction: row;
+
 	}
 }
-.browse-by-text h1{
+
+.homepage-links__name{
 	@include itemHeading;
 }
 
-.browse-by-icon{
+.homepage-links__icon{
 	width: 100%;
 	max-width: $unit*24;
 	height: auto;
@@ -53,7 +55,7 @@
 		margin-right: $unit*2;
 	}
 }
-.browse-by-description{
+.homepage-linksdescription{
 	@include textExplain;
 	@include media-regUp{
 		text-align: center;

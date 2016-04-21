@@ -1,10 +1,10 @@
 	<div class="app__container"><!--closes in footer-->
 	<div class="app__header">
-		<a class="sidebar-toggle" tabindex=0>
-			<div class="hamburger-menu"></div>
-		</a>
-		{% assign appData = site.data.appDefaults[0] %}
-		<a href={{site.url}}>
-			<h1 class="app__header__title">{{appData.appHeaderTitle}}</h1>
-		</a>
+		<div class="sidebar-activate" tabindex=0>
+			<a class="sidebar-toggle">
+				<div class="hamburger-menu"></div>
+			</a>
+			{% assign appData = site.data.appDefaults[0] %}
+			{% unless page.hideHeaderTitle %}<h1 class="app__header__title">{{appData.appHeaderTitle}}</h1>{% endunless %}
+		</div>
 	</div>

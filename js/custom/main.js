@@ -5,7 +5,7 @@ var productIdentifier = "trcdv1";
 $(document).ready(function(){
   var $els = {
  	body: $("body"),
- 	sidebarToggle: $(".sidebar-toggle")
+ 	sidebarActivate: $(".sidebar-activate")
   }
 
   //autorun on all pages
@@ -71,8 +71,6 @@ $(document).ready(function(){
 	// }
 
 	var sidebar = {
-
-
 		toggleState: function(){
 			$els.body.toggleClass("-js-sidebar-closed");
 		},
@@ -84,7 +82,7 @@ $(document).ready(function(){
 	sidebar.init(); 
 
   //interactions all pages
-  $els.sidebarToggle.on("click keydown", function(e){
+  $els.sidebarActivate.on("click keydown", function(e){
   	if (e.type ==='click' || e.type ==='keydown' && e.which == 13) {
 	  	sidebar.toggleState(); 
 
