@@ -28,8 +28,8 @@
 	cursor: pointer;
 	@include user-select-none;
 	@include no-tap-color;
-	transition: background-color 0.2s;
+	transition: all 0.2s;
 	&:hover{
-		background-color: #eee;
+		background-color: $c-hover-color;
 	}
 }

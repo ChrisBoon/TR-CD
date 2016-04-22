@@ -10,6 +10,7 @@
 	.-js-sidebar-closed &{
 		transform: translateX(-300px);
 	}
+	@include scroll;
 }
 .sidebar-nav{
 
@@ -25,6 +26,10 @@
 }
 .sidebar-nav__link{
 	@include list-link-basic;
+	transition: all 0.2s;
+	&:hover{
+		@include cardListHover;
+	}
 	&--1{
 		@include heavyLink;
 	}

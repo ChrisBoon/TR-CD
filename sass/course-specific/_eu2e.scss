@@ -1,5 +1,3 @@
-$c-eu2e-level-1-main: #a865a3;
-
 .homepage{
   .app__header{
     background:#fff;
@@ -78,5 +76,16 @@ $c-eu2e-level-1-main: #a865a3;
         transform: translateX(-3113px);
       }
     }
+  }
+}
+
+//sidebar
+
+.sidebar-nav__link{
+  &--is-open{
+    color: $c-eu2e-level-1-main;
+  }
+  &:hover{
+    color: $c-eu2e-level-1-main;
   }
 }
