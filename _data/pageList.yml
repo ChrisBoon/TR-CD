@@ -26,61 +26,51 @@ eu1:
   name: Unit 1 Test
   link: everybody-up-test-1
   hierarchy: 2
-  includeOnHome: true
 
 eu2:
-  name: Unit 1 Test
+  name: Unit 2 Test
   link: everybody-up-test-2
   hierarchy: 2
-  includeOnHome: true
 
 eu3:
-  name: Unit 1 Test
+  name: Unit 3 Test
   link: everybody-up-test-3
   hierarchy: 2
-  includeOnHome: true
 
 eu4:
-  name: Unit 1 Test
+  name: Unit 4 Test
   link: everybody-up-test-4
   hierarchy: 2
-  includeOnHome: true
 
 eumidterm:
-  name: Unit 1 Test
+  name: Midterm Test
   link: everybody-up-test-midterm
   hierarchy: 2
-  includeOnHome: true
 
 eu5:
-  name: Unit 1 Test
+  name: Unit 5 Test
   link: everybody-up-test-5
   hierarchy: 2
-  includeOnHome: true
 
 eu6:
-  name: Unit 1 Test
+  name: Unit 6 Test
   link: everybody-up-test-6
   hierarchy: 2
-  includeOnHome: true
 
 eu7:
-  name: Unit 1 Test
+  name: Unit 7 Test
   link: everybody-up-test-7
   hierarchy: 2
-  includeOnHome: true
 
 eu8:
-  name: Unit 1 Test
+  name: Unit 8 Test
   link: everybody-up-test-8
   hierarchy: 2
-  includeOnHome: true
 
 eufinal:
-  name: Unit 1 Test
+  name: Final Test
   link: everybody-up-test-final
   hierarchy: 2
-  includeOnHome: true
 
 cyl:
   name: Cambridge Young Learners
