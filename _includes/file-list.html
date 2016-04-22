@@ -16,17 +16,27 @@
 	{% else %}
   	<ul>
 		{% for file in site.data.pageList[include.fileList].files%}
-  		<li class="file-list__item">
+  		<li class="file-list__item file-list__item--{{file.fileType}}">
 	  		{% if file.fileType == "folder" %}
 	  		<a href="structure/{{file.link}}" class="file-list__link file-list__link--{{file.fileType}}">
 	  		{% elsif file.fileType == "pdf" %}
-	  		<a href="assets/{{file.link}}" target="_blank" class="file-list__link file-list-link__{{file.fileType}}" download>
+	  		<a href="assets/{{file.link}}" target="_blank" class="file-list__link file-list-link--{{file.fileType}}" download>
+	  		{% elsif file.fileType == "audio" %}
+			<a href="assets/{{file.link}}" class="file-list__link file-list-link--{{file.fileType}}">
 	  		{% else %}
-	  		<a href="assets/{{file.link}}" class="file-list__link file-list-link__{{file.fileType}}" download>
+	  		<a href="assets/{{file.link}}" class="file-list__link file-list-link--{{file.fileType}}" download>
 			{% endif %}
 	  			<span class="file-list__icon file-list__icon--{{ file.fileType }}"></span>
 	  			<span class="file-list__name">{{file.name}}</span>
   			</a>
+  			{% if file.fileType == "audio" %}
+  				<div class="file-list__item__expansion file-list__item__expansion--audio">
+  					<div class="file-list__audio-container">
+	  					<audio class="file-list__audio" src="assets/{{file.link}}" controls="true">
+					</div>
+					<a href="assets/{{file.link}}" class="file-list__download file-list__download__{{file.fileType}}" download>Save to computer</a>
+  				</div>
+  			{% endif %}
   		</li>
   		{% endfor %}
   	</ul>
