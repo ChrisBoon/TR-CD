@@ -7,12 +7,19 @@
 	&:not(:last-child){
 		border-bottom: 1px solid $c-eltny-line;
 	}
+	&--is-open{
+		background-color: $c-eltny-audio;
+		color: #fff;
+	}
 }
 
 .file-list__link{
 	@include cardListHover;
 	display: block;
 	padding: $unit;
+	.file-list__item--is-open &:hover{
+		background:none;
+	}
 }
 
 .file-list__icon{
@@ -20,4 +27,27 @@
     vertical-align: top;
 	display: inline-block;
 	margin-right: $unit;
+}
+
+.file-list__item__expansion{
+	padding: $unit;
+	display: none;
+	.file-list__item--is-open &{
+		display: flex;
+	}
+}
+
+.file-list__download{
+	@include button-basic(rgba(#fff,0.4));
+	flex: 1 1 auto;
+	color: $base-text-color;
+}
+
+.file-list__audio-container{
+	flex: 4 0 auto;
+	padding-right: $unit*2;
+}
+.file-list__audio{
+	display: block;
+	width: 100%;
 }
