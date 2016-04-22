@@ -9,6 +9,12 @@ placement:
   link: placement-tests
   hierarchy: 1
   includeOnHome: true
+  files:
+    - {name: "Placement Test", fileType: "pdf", link: "placeholder"}
+    - {name: "Placement Test", fileType: "doc", link: "placeholder"}
+    - {name: "Answer Key", fileType: "pdf", link: "placeholder"}
+    - {name: "Instructions", fileType: "pdf", link: "placeholder"}
+    - {name: "Picture Card", fileType: "pdf", link: "placeholder"}
 
 eutest:
   name: Everybody Up Tests
@@ -16,8 +22,69 @@ eutest:
   hierarchy: 1
   includeOnHome: true
 
+eu1:
+  name: Unit 1 Test
+  link: everybody-up-test-1
+  hierarchy: 2
+  includeOnHome: true
+
+eu2:
+  name: Unit 1 Test
+  link: everybody-up-test-2
+  hierarchy: 2
+  includeOnHome: true
+
+eu3:
+  name: Unit 1 Test
+  link: everybody-up-test-3
+  hierarchy: 2
+  includeOnHome: true
+
+eu4:
+  name: Unit 1 Test
+  link: everybody-up-test-4
+  hierarchy: 2
+  includeOnHome: true
+
+eumidterm:
+  name: Unit 1 Test
+  link: everybody-up-test-midterm
+  hierarchy: 2
+  includeOnHome: true
+
+eu5:
+  name: Unit 1 Test
+  link: everybody-up-test-5
+  hierarchy: 2
+  includeOnHome: true
+
+eu6:
+  name: Unit 1 Test
+  link: everybody-up-test-6
+  hierarchy: 2
+  includeOnHome: true
+
+eu7:
+  name: Unit 1 Test
+  link: everybody-up-test-7
+  hierarchy: 2
+  includeOnHome: true
+
+eu8:
+  name: Unit 1 Test
+  link: everybody-up-test-8
+  hierarchy: 2
+  includeOnHome: true
+
+eufinal:
+  name: Unit 1 Test
+  link: everybody-up-test-final
+  hierarchy: 2
+  includeOnHome: true
+
 cyl:
   name: Cambridge Young Learners
+  description: An optional description can go here. There's technically no limit to the length, but I would advise keeping short. Perhaps I could implement the 'read more' functionality. Would need Bootstrap though.
   link: cyl
   hierarchy: 1
   includeOnHome: true
@@ -36,6 +103,7 @@ cyl:
 
 cyl-1:
   name: Starters Test 1
+  longName: "Cambridge Young Learners: Starters Test 1"
   hierarchy: 2
   link: cyl-test-1
   files:
