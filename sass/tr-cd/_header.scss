@@ -63,14 +63,4 @@
   &:after{
     transform: translate(0,8px);
   }
-  .open &{
-	  	background: none;
-      &:before{
-        transform: rotate(45deg);
-      }
-      &:after{
-        transform: rotate(-45deg);
-      }
-  }
-
 }
