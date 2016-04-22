@@ -8,7 +8,9 @@
 .sidebar-activate{
   @include user-select-none;
   @include no-tap-color;
+  @include clearfix;
   cursor: pointer;
+  float: left;
 
 }
 
