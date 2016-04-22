@@ -1,5 +1,4 @@
 body{
-	background: $c-eltny-bg;
 	// position: relative;
 }
 .container{
@@ -10,6 +9,7 @@ body{
 }
 
 .app__container{
+	background: $c-eltny-bg;
 	margin-left: $sidebar-width;
 	transition: margin 0.2s;
 	.-js-sidebar-closed &{
