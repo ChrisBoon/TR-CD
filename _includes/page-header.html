@@ -1,17 +1,23 @@
 <div class="content-view-header">
 	<div class="container">
-		
-		{% if page.icon %}
+	{% assign pageData = site.data.pageList[include.fileList] %}
+		{% if pageData.icon %}
 		<div class="view-icon-holder">
 			<img src="{{page.icon}}" alt="">
 		</div>
 		{% endif %}
 		
 		<div class="content-view-header-text">
-			<h1 class="content-view-heading-main">{{ page.title }}</h1>
+			<h1 class="content-view-heading-main">
+			{% if pageData.longName %}
+			{{ pageData.longName }}
+			{% else %}
+			{{ pageData.name }}
+			{% endif %}
+			</h1>
 			
-			{% if page.description %}
-			<p class="content-view-page-desc">{{ page.description}}</p>
+			{% if pageData.description %}
+			<p class="content-view-page-desc">{{ pageData.description}}</p>
 			{% endif %}
 		</div>
 
