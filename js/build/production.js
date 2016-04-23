@@ -253,7 +253,11 @@ var productIdentifier = "trcdv1";
 $(document).ready(function(){
   var $els = {
  	body: $("body"),
- 	sidebarActivate: $(".sidebar-activate")
+ 	sidebarActivate: $(".sidebar-activate"),
+ 	listItemAudio: $(".file-list__item--audio"),
+ 	audioHolder: $(".file-list__item__expansion"),
+ 	audio: $(".file-list__audio"),
+ 	download: $(".file-list__download")
   }
 
   //autorun on all pages
@@ -325,15 +329,70 @@ $(document).ready(function(){
 		init: function(){
 
 		}
-	}
-
+	};
 	sidebar.init(); 
 
+	var audioPlayer = {
+		audio: null,
+		container: null,
+		openClass:"file-list__item--is-open",
+		playAudio: function(){
+			this.audio.play();
+		},
+		stopOtherAudio: function(){
+			$els.audio.each(function(index){
+				var eachAudio = $(this)[0];
+				if ( eachAudio.duration > 0 || eachAudio.src.length > 0 ) {
+					eachAudio.pause();
+					eachAudio.currentTime = 0;
+				}
+			})
+		},
+		showAudioControls: function(){
+			this.container.addClass(this.openClass);
+		},
+		hideOtherAudioControls: function(){
+			$("."+this.openClass).removeClass(this.openClass);
+		},
+		initAudio: function(audioChoice){
+			this.container = audioChoice;
+			this.audio = audioChoice.find('audio')[0];
+			if (audioChoice.hasClass(this.openClass)) {
+				this.stopOtherAudio();
+				this.hideOtherAudioControls();
+			}
+			else{
+				this.stopOtherAudio();
+				this.hideOtherAudioControls();
+				this.playAudio();
+				this.showAudioControls();
+			}
+		}
+	};
   //interactions all pages
+
+  $els.listItemAudio.on("click keydown", function(e){
+  	if (e.type ==='click' || e.type ==='keydown' && e.which == 13) {
+  		e.preventDefault();
+
+	  	audioPlayer.initAudio( $(this) ); 
+
+  	}
+  });
+
+  $els.audioHolder.on("click keydown", function(e){
+  	if (e.type ==='click' || e.type ==='keydown' && e.which == 13) {
+  		event.stopPropagation();
+
+  	}
+  });
+
+	
+
+
   $els.sidebarActivate.on("click keydown", function(e){
   	if (e.type ==='click' || e.type ==='keydown' && e.which == 13) {
 	  	sidebar.toggleState(); 
-
   	}
   })
 
