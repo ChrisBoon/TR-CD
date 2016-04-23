@@ -1,9 +1,10 @@
 <div class="sidebar">
 	<ul class="sidebar-nav">
-	  {% for page in site.data.pageList%}
-	    <li class="sidebar-nav__li sidebar-nav__li--{{page[1].hierarchy}}">
-	    	<a class="sidebar-nav__link sidebar-nav__link--{{page[1].hierarchy}}" 
-	    		href="{% if page[1].special == null %}structure/{% endif %}{{ page[1].link }}">{{ page[1].name }}</a>
+	  {% for item in site.data.pageList%}
+	  {% capture compare %}/structure/{{ item[1].link }}.html{% endcapture %}
+	    <li class="sidebar-nav__li sidebar-nav__li--{{item[1].hierarchy}}">
+	    	<a class="sidebar-nav__link sidebar-nav__link--{{item[1].hierarchy}} {% if compare == page.url or item[1].special == true and page.url == '/' %} sidebar-nav__link--is-open{% endif %}" 
+	    		href="{% if item[1].special == null %}structure/{% endif %}{{ item[1].link }}">{{ item[1].name }}</a>
 	    	</li>
 	  {% endfor %}
 	</ul>
