@@ -1,12 +1,14 @@
 {% include head.html %}
 {% include header.html %}
 
-{% include page-header.html fileList = page.list%}
+<div class="files-page">
+	{% include page-header.html fileList = page.list%}
 
-{{ content }}
+	{{ content }}
 
 
-<div class="container">
-	{% include file-list.html fileList = page.list%}
+	<div class="container">
+		{% include file-list.html fileList = page.list%}
+	</div>
 </div>
 {% include footer.html %}
