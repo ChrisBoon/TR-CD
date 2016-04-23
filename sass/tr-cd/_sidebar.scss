@@ -30,6 +30,11 @@
 	&:hover{
 		@include cardListHover;
 	}
+	&--is-open{
+		cursor: pointer;
+		pointer-events: none;
+		
+	}
 	&--1{
 		@include heavyLink;
 	}

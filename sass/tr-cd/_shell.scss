@@ -1,5 +1,7 @@
 body{
-	// position: relative;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
 }
 .container{
 	max-width: $unit*140;
@@ -15,4 +17,20 @@ body{
 	.-js-sidebar-closed &{
 		margin-left: 0;
 	}
+
+	display: flex;
+	flex-direction: column;
+	flex: auto;
+}
+
+//some of these rules should be moved to their related component files but I want to keep flexbox stuff in one place until early testing is complete
+.files-page{
+	flex: auto;
+}
+.app__header,
+.page-footer{
+	flex: 0 0 auto;
+}
+.color-container{
+	flex: auto;
 }

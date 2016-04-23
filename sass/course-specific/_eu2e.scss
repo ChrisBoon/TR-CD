@@ -84,6 +84,7 @@
 .sidebar-nav__link{
   &--is-open{
     color: $c-eu2e-level-1-main;
+    background-color: rgba($c-eu2e-level-1-main,0.3);
   }
   &:hover{
     color: $c-eu2e-level-1-main;
