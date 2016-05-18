@@ -29,6 +29,12 @@
 	margin-right: $unit;
 }
 
+.file-list__name{
+	.homepage & {
+		@include heavyLink;
+	}
+}
+
 .file-list__item__expansion{
 	padding: $unit;
 	display: none;
