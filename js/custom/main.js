@@ -8,71 +8,12 @@ $(document).ready(function(){
  	sidebarActivate: $(".sidebar-activate"),
  	listItemAudio: $(".file-list__item--audio"),
  	audioHolder: $(".file-list__item__expansion"),
+ 	audioLink: $(".file-list__link--audio"),
  	audio: $(".file-list__audio"),
- 	download: $(".file-list__download")
+ 	download: $(".file-list__download"),
+ 	termsModal: $(".terms__modal"),
+ 	termsAccept: $(".terms__accept")
   }
-
-  //autorun on all pages
-
-	// var sidebar = {
-
-	// 	key: productIdentifier + 'SidebarOpen',
-
-	// 	canHas: false,
-
-	// 	toggleState: function(){
-	// 		var current = localStorage[this.key];
-	// 		if( current === "open"){
-	// 			$els.body.addClass("-js-sidebar-closed");
-	// 			localStorage[this.key] = "closed";
-	// 			console.log(localStorage[this.key]);
-	// 		}
-	// 		else if( current === "closed"){
-	// 			$els.body.removeClass("-js-sidebar-closed");
-	// 			localStorage[this.key] = "open";
-	// 			console.log(localStorage[this.key]);
-	// 		}
-	// 		else{
-	// 			console.log("sidebar.setState only accepts 'open' or 'closed' as options");
-	// 		}
-	// 	},
-	// 	setStateTrue: function(){
-	// 		$els.body.removeClass("-js-sidebar-closed");
-	// 		localStorage[this.key] = 'open';
-	// 	},
-	// 	setStateFalse: function(){
-	// 		$els.body.addClass("-js-sidebar-closed");
-	// 		localStorage[this.key] = 'closed';
-	// 	},
-
-	// 	getState: function(){
-	// 		return localStorage[this.key];
-	// 	},
-	// 	init: function(){
-	// 		if ($els.body.data("suppresssidebar") == true) {
-	// 			this.setStateFalse();
-	// 		}
-	// 		if (window.localStorage) { // checks if browser support localStorage
-	// 			this.canHas = true;
-				
-	// 			if (localStorage[this.key]) { // checks if value exists
-	// 				var setAs = this.getState();
-	// 				if (setAs ==='closed') {
-	// 					this.setStateFalse();
-	// 				}
-	// 			}
-	// 			else{
-	// 				this.setStateTrue();
-	// 			}
-	// 		}
-	// 		//if there is no localStorage we can't save state so may as well hide the close option
-	// 		else {
-	// 			$els.sidebarToggle.hide();
-	// 			console.log("localStorage is not supported");
-	// 		}
-
-	// 	}
-	// }
 
 	var sidebar = {
 		toggleState: function(){
@@ -82,7 +23,6 @@ $(document).ready(function(){
 
 		}
 	};
-	sidebar.init(); 
 
 	var audioPlayer = {
 		audio: null,
@@ -116,35 +56,55 @@ $(document).ready(function(){
 			else{
 				this.stopOtherAudio();
 				this.hideOtherAudioControls();
-				this.playAudio();
 				this.showAudioControls();
 			}
 		}
 	};
+
+
+	var terms = {
+		storageKey: "termsAccepted-eu2e-1",
+		init: function(){
+			if ( $.jStorage.storageAvailable() ) {
+				var keySet = $.jStorage.get(this.storageKey);
+				if (!keySet){
+					$els.termsModal.modal('show');
+				}
+				else{
+					console.log("terms already accepted!")
+				}
+			}
+		},
+		goAway: function(){
+			$.jStorage.set(this.storageKey, "sure");
+			$els.termsModal.modal('hide');
+		}
+	}
+	terms.init();
+	//homepage specific:
+
+	$els.termsAccept.on("click keydown", function(e){
+	  	if (e.type ==='click' || e.type ==='keydown' && e.which == 13) {
+	  		terms.goAway();
+	  	}
+    });
+
   //interactions all pages
 
-  $els.listItemAudio.on("click keydown", function(e){
+  //if clicking an audio item:
+  $els.audioLink.on("click keydown", function(e){
   	if (e.type ==='click' || e.type ==='keydown' && e.which == 13) {
+  		//don't follow link:
   		e.preventDefault();
-
-	  	audioPlayer.initAudio( $(this) ); 
-
+  		//instead open the dropdown (and stop any other audio):
+	  	audioPlayer.initAudio( $(this).parent() ); 
   	}
   });
 
-  $els.audioHolder.on("click keydown", function(e){
-  	if (e.type ==='click' || e.type ==='keydown' && e.which == 13) {
-  		event.stopPropagation();
-
-  	}
-  });
-
-	
-
-
+  //toggle the sidebar:
   $els.sidebarActivate.on("click keydown", function(e){
   	if (e.type ==='click' || e.type ==='keydown' && e.which == 13) {
-	  	sidebar.toggleState(); 
+	  	sidebar.toggleState();
   	}
   })
 
