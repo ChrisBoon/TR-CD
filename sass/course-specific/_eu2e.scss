@@ -50,7 +50,6 @@
   position: relative;
   overflow: hidden;
   &:before{
-    will-change: transform;
     position: absolute;
     display: block;
     content: "";
@@ -61,7 +60,7 @@
     background-position: 0 -1px;
     top: 0;
     left: 0;
-    animation: movingBG2 60s infinite linear;
+    animation: movingBG2 90s infinite linear;
   }
   @at-root{
     @keyframes movingBG{
@@ -80,7 +79,6 @@
 }
 
 //sidebar
-
 .sidebar-nav__link{
   &--is-open{
     color: $c-eu2e-level-1-main;
@@ -89,4 +87,9 @@
   &:hover{
     color: $c-eu2e-level-1-main;
   }
+}
+
+//t&c modal:
+.modal-backdrop {
+  background-color: $c-eu2e-level-1-main;
 }
