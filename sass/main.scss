@@ -1,9 +1,9 @@
 @import "elt-ny/utils/_mixins";
 @import "elt-ny/utils/_media-queries";
 
-@import "course-specific/_variables";
-
 @import "elt-ny/utils/_variables";
+
+@import "course-specific/_variables";
 
 @import "elt-ny/base/_reset.scss";
 @import "elt-ny/base/_typography.scss";
@@ -29,7 +29,6 @@
 @import "tr-cd/_page-header";
 
 @import "tr-cd/_file-list";
-
 
 
 @import "elt-ny/sections/_footer";

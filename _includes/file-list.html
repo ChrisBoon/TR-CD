@@ -5,7 +5,7 @@
 		{% for file in site.data.pageList%}
 			{% if file[1].includeOnHome == true %}
 		  		<li class="file-list__item">
-			  		<a href="structure/{{file[1].link}}" class="file-list__link">
+			  		<a href="{{base}}structure/{{file[1].link}}.html" class="file-list__link">
 			  			<span class="file-list__icon file-list__icon--folder"></span>
 			  			<span class="file-list__name">{{file[1].name}}</span>
 		  			</a>
@@ -18,13 +18,13 @@
 		{% for file in site.data.pageList[include.fileList].files%}
   		<li class="file-list__item file-list__item--{{file.fileType}}">
 	  		{% if file.fileType == "folder" %}
-	  		<a href="structure/{{file.link}}" class="file-list__link file-list__link--{{file.fileType}}">
+	  		<a href="{{base}}structure/{{file.link}}.html" class="file-list__link file-list__link--{{file.fileType}}">
 	  		{% elsif file.fileType == "pdf" %}
-	  		<a href="assets/{{file.link}}" target="_blank" class="file-list__link file-list-link--{{file.fileType}}" download>
+	  		<a href="{{base}}assets/{{file.link}}" target="_blank" class="file-list__link file-list-link--{{file.fileType}}" download>
 	  		{% elsif file.fileType == "audio" %}
-			<a href="assets/{{file.link}}" class="file-list__link file-list-link--{{file.fileType}}">
+			<a href="{{base}}assets/{{file.link}}" class="file-list__link file-list__link--{{file.fileType}}">
 	  		{% else %}
-	  		<a href="assets/{{file.link}}" class="file-list__link file-list-link--{{file.fileType}}" download>
+	  		<a href="{{base}}assets/{{file.link}}" class="file-list__link file-list-link--{{file.fileType}}" download>
 			{% endif %}
 	  			<span class="file-list__icon file-list__icon--{{ file.fileType }}"></span>
 	  			<span class="file-list__name">{{file.name}}</span>
@@ -32,9 +32,9 @@
   			{% if file.fileType == "audio" %}
   				<div class="file-list__item__expansion file-list__item__expansion--audio">
   					<div class="file-list__audio-container">
-	  					<audio class="file-list__audio" src="assets/{{file.link}}" controls="true">
+	  					<audio class="file-list__audio" src="{{base}}assets/{{file.link}}" controls="true">
 					</div>
-					<a href="assets/{{file.link}}" class="file-list__download file-list__download__{{file.fileType}}" download>Save to computer</a>
+					<a href="{{base}}assets/{{file.link}}" class="file-list__download file-list__download__{{file.fileType}}" download>Save to computer</a>
   				</div>
   			{% endif %}
   		</li>
