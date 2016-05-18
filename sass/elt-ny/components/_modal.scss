@@ -8,7 +8,7 @@
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 1;
+  z-index: 2;
   display: none;
   overflow: hidden;
   -webkit-overflow-scrolling: touch;
@@ -36,7 +36,7 @@
   margin: $unit*12 $unit*2 $unit*2;
   @include media-regUp{
   	margin: $unit*10 auto;
-	max-width: $unit*90;
+  	max-width: $unit*90;
 
   }
 
@@ -72,6 +72,12 @@
 }
 .modal-body {
 	min-height: $unit*10;
+  &--scroll{
+    @include ios-scroll;
+    max-height: 70vh;
+    margin-bottom: $unit*2;
+    padding: $unit;
+  }
   
   //styling for content:
 
@@ -89,6 +95,7 @@
 
 
 .close-modal-button{
+  @include real-button-override;
   @include button-basic($c-button-1);
   align-self: flex-end;
 }
