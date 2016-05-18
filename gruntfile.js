@@ -76,9 +76,7 @@ module.exports = function(grunt) {
             options: {
                 map: true,
                 processors: [
-                    require('autoprefixer')({
-                        browsers: 'last 2 version, IE 9'
-                    }), // add vendor prefixes. for more: https://github.com/ai/browserslist
+                    require('autoprefixer')({browsers: ['last 3 versions', 'Explorer >= 9', 'Firefox >= 22', 'Chrome >= 21', 'Safari >= 6']}), // add/remove browser prefixes
                     require('cssnano')() // minify the result
                 ]
             },
