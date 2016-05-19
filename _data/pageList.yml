@@ -10,132 +10,291 @@ placement:
   hierarchy: 1
   includeOnHome: true
   files:
-    - {name: "Placement Test", fileType: "pdf", link: "placeholder"}
-    - {name: "Placement Test", fileType: "doc", link: "placeholder"}
-    - {name: "Answer Key", fileType: "pdf", link: "placeholder"}
-    - {name: "Instructions", fileType: "pdf", link: "placeholder"}
-    - {name: "Picture Card", fileType: "pdf", link: "placeholder"}
+    - {name: "Placement Test A", fileType: "pdf", link: "Placement_Test/PlacementTestA_PDF/PlacementTest_A.pdf"}
+    - {name: "Placement Test A", fileType: "doc", link: "Placement_Test/PlacementTestA_DOC/PlacementTest_A.doc"}
+    - {name: "Answer Key A", fileType: "pdf", link: "Placement_Test/PlacementTestA_PDF/PlacementTest_A_AnswerKey.pdf"}
+    - {name: "Instructions A", fileType: "pdf", link: "Placement_Test/PlacementTestA_PDF/PlacementTestA_Instructions.pdf"}
+    - {name: "Picture Card A", fileType: "pdf", link: "Placement_Test/PlacementTestA_PDF/PlacementTest_A_PictureCard.pdf"}
 
-eutest:
-  name: Everybody Up Tests
-  link: everybody-up-tests
+general:
+  name: General Resources
+  link: general-resources
   hierarchy: 1
   includeOnHome: true
+  files:
+    - {name: "Test Instructions", fileType: "pdf", link: "General_Resources/EU2e_TRC1_Instructions.pdf"}
+    - {name: "Test Answer Key", fileType: "pdf", link: "General_Resources/EU2e_TRC1_AK.pdf"}
+    - {name: "Test Answer Key", fileType: "doc", link: "General_Resources/EU2e_TRC1_AK.doc"}
+    - {name: "Track List", fileType: "pdf", link: "General_Resources/EU2e_TRC1_TL.pdf"}
 
-eu1:
+entrytest:
+  name: Entry Test and Entry Reviews
+  link: entry-test-and-reviews
+  hierarchy: 1
+  includeOnHome: true
+  files:
+    - {name: "Track 1", fileType: "audio", link: "Entry_Test_and_Entry_Reviews/Audio/EU2e_TRC1_Introduction.mp3"}
+    - {name: "Track 2", fileType: "audio", link: "Entry_Test_and_Entry_Reviews/Audio/EU2e_TRC1_Test_ET.mp3"}
+    - {name: "Entry Test", fileType: "pdf", link: "Entry_Test_and_Entry_Reviews/EU2e_TRC1_ET.pdf"}
+    - {name: "Entry Review 1", fileType: "pdf", link: "Entry_Test_and_Entry_Reviews/EU2e_TRC1_ER1.pdf"}
+    - {name: "Entry Review 2", fileType: "pdf", link: "Entry_Test_and_Entry_Reviews/EU2e_TRC1_ER2.pdf"}
+    - {name: "Entry Review 3", fileType: "pdf", link: "Entry_Test_and_Entry_Reviews/EU2e_TRC1_ER3.pdf"}
+    - {name: "Entry Review 4", fileType: "pdf", link: "Entry_Test_and_Entry_Reviews/EU2e_TRC1_ER4.pdf"}
+    - {name: "Entry Review 5", fileType: "pdf", link: "Entry_Test_and_Entry_Reviews/EU2e_TRC1_ER5.pdf"}
+
+achievementtests:
+  name: Achievement Tests
+  link: achievement-tests
+  hierarchy: 1
+  includeOnHome: true
+  files:
+    - {name: "Unit 1 Test", fileType: "folder", link: "achievement-test-1"}    
+    - {name: "Unit 2 Test", fileType: "folder", link: "achievement-test-2"}    
+    - {name: "Unit 3 Test", fileType: "folder", link: "achievement-test-3"}    
+    - {name: "Unit 4 Test", fileType: "folder", link: "achievement-test-4"}    
+    - {name: "Midterm Test", fileType: "folder", link: "achievement-test-midterm"}    
+    - {name: "Unit 5 Test", fileType: "folder", link: "achievement-test-5"}    
+    - {name: "Unit 6 Test", fileType: "folder", link: "achievement-test-6"}    
+    - {name: "Unit 7 Test", fileType: "folder", link: "achievement-test-7"}    
+    - {name: "Unit 8 Test", fileType: "folder", link: "achievement-test-8"}    
+    - {name: "Final Test", fileType: "folder", link: "achievement-test-final"}    
+
+achievementtest1:
   name: Unit 1 Test
-  link: everybody-up-test-1
+  longName: "Achievement Test: Unit 1"
+  link: achievement-test-1
   hierarchy: 2
+  files:
+    - {name: "Unit 1 Test", fileType: "pdf", link: "Achievement_Tests/Achievement_Test_PDFs/EU2e_TRC1_UT1.pdf"}
+    - {name: "Unit 1 Test", fileType: "doc", link: "Achievement_Tests/Achievement_Test_DOCs/EU2e_TRC1_UT1.doc"}
+    - {name: "Track 3", fileType: "audio", link: "Achievement_Tests/Achievement_Test_Audio/EU2e_TRC1_UT1.mp3"}
 
-eu2:
+achievementtest2:
   name: Unit 2 Test
-  link: everybody-up-test-2
+  longName: "Achievement Test: Unit 2"
+  link: achievement-test-2
   hierarchy: 2
+  files:
+    - {name: "Unit 2 Test", fileType: "pdf", link: "Achievement_Tests/Achievement_Test_PDFs/EU2e_TRC1_UT2.pdf"}
+    - {name: "Unit 2 Test", fileType: "doc", link: "Achievement_Tests/Achievement_Test_DOCs/EU2e_TRC1_UT2.doc"}
+    - {name: "Track 4", fileType: "audio", link: "Achievement_Tests/Achievement_Test_Audio/EU2e_TRC1_UT2.mp3"}
 
-eu3:
+achievementtest3:
   name: Unit 3 Test
-  link: everybody-up-test-3
+  longName: "Achievement Test: Unit 3"
+  link: achievement-test-3
   hierarchy: 2
+  files:
+    - {name: "Unit 3 Test", fileType: "pdf", link: "Achievement_Tests/Achievement_Test_PDFs/EU2e_TRC1_UT3.pdf"}
+    - {name: "Unit 3 Test", fileType: "doc", link: "Achievement_Tests/Achievement_Test_DOCs/EU2e_TRC1_UT3.doc"}
+    - {name: "Track 5", fileType: "audio", link: "Achievement_Tests/Achievement_Test_Audio/EU2e_TRC1_UT3.mp3"}
 
-eu4:
+achievementtest4:
   name: Unit 4 Test
-  link: everybody-up-test-4
+  longName: "Achievement Test: Unit 4"
+  link: achievement-test-4
   hierarchy: 2
+  files:
+    - {name: "Unit 4 Test", fileType: "pdf", link: "Achievement_Tests/Achievement_Test_PDFs/EU2e_TRC1_UT4.pdf"}
+    - {name: "Unit 4 Test", fileType: "doc", link: "Achievement_Tests/Achievement_Test_DOCs/EU2e_TRC1_UT4.doc"}
+    - {name: "Track 6", fileType: "audio", link: "Achievement_Tests/Achievement_Test_Audio/EU2e_TRC1_UT4.mp3"}
 
-eumidterm:
+achievementtestmidterm:
   name: Midterm Test
-  link: everybody-up-test-midterm
+  longName: "Achievement Test: Midterm"
+  link: achievement-test-midterm
   hierarchy: 2
+  files:
+    - {name: "Midterm Test", fileType: "pdf", link: "Achievement_Tests/Achievement_Test_PDFs/EU2e_TRC1_MT.pdf"}
+    - {name: "Midterm Test", fileType: "doc", link: "Achievement_Tests/Achievement_Test_DOCs/EU2e_TRC1_MT.doc"}
+    - {name: "Track 7", fileType: "audio", link: "Achievement_Tests/Achievement_Test_Audio/EU2e_TRC1_MT.mp3"}
 
-eu5:
+achievementtest5:
   name: Unit 5 Test
-  link: everybody-up-test-5
+  longName: "Achievement Test: Unit 5"
+  link: achievement-test-5
   hierarchy: 2
+  files:
+    - {name: "Unit 5 Test", fileType: "pdf", link: "Achievement_Tests/Achievement_Test_PDFs/EU2e_TRC1_UT5.pdf"}
+    - {name: "Unit 5 Test", fileType: "doc", link: "Achievement_Tests/Achievement_Test_DOCs/EU2e_TRC1_UT5.doc"}
+    - {name: "Track 8", fileType: "audio", link: "Achievement_Tests/Achievement_Test_Audio/EU2e_TRC1_UT5.mp3"}
 
-eu6:
+achievementtest6:
   name: Unit 6 Test
-  link: everybody-up-test-6
+  longName: "Achievement Test: Unit 6"
+  link: achievement-test-6
   hierarchy: 2
+  files:
+    - {name: "Unit 6 Test", fileType: "pdf", link: "Achievement_Tests/Achievement_Test_PDFs/EU2e_TRC1_UT6.pdf"}
+    - {name: "Unit 6 Test", fileType: "doc", link: "Achievement_Tests/Achievement_Test_DOCs/EU2e_TRC1_UT6.doc"}
+    - {name: "Track 9", fileType: "audio", link: "Achievement_Tests/Achievement_Test_Audio/EU2e_TRC1_UT6.mp3"}
 
-eu7:
+achievementtest7:
   name: Unit 7 Test
-  link: everybody-up-test-7
+  longName: "Achievement Test: Unit 7"
+  link: achievement-test-7
   hierarchy: 2
+  files:
+    - {name: "Unit 7 Test", fileType: "pdf", link: "Achievement_Tests/Achievement_Test_PDFs/EU2e_TRC1_UT7.pdf"}
+    - {name: "Unit 7 Test", fileType: "doc", link: "Achievement_Tests/Achievement_Test_DOCs/EU2e_TRC1_UT7.doc"}
+    - {name: "Track 10", fileType: "audio", link: "Achievement_Tests/Achievement_Test_Audio/EU2e_TRC1_UT7.mp3"}
 
-eu8:
+achievementtest8:
   name: Unit 8 Test
-  link: everybody-up-test-8
+  longName: "Achievement Test: Unit 8"
+  link: achievement-test-8
   hierarchy: 2
+  files:
+    - {name: "Unit 8 Test", fileType: "pdf", link: "Achievement_Tests/Achievement_Test_PDFs/EU2e_TRC1_UT8.pdf"}
+    - {name: "Unit 8 Test", fileType: "doc", link: "Achievement_Tests/Achievement_Test_DOCs/EU2e_TRC1_UT8.doc"}
+    - {name: "Track 11", fileType: "audio", link: "Achievement_Tests/Achievement_Test_Audio/EU2e_TRC1_UT8.mp3"}
 
-eufinal:
+achievementtestfinal:
   name: Final Test
-  link: everybody-up-test-final
+  longName: "Achievement Test: Final"
+  link: achievement-test-final
   hierarchy: 2
+  files:
+    - {name: "Final Test", fileType: "pdf", link: "Achievement_Tests/Achievement_Test_PDFs/EU2e_TRC1_FT.pdf"}
+    - {name: "Final Test", fileType: "doc", link: "Achievement_Tests/Achievement_Test_DOCs/EU2e_TRC1_FT.doc"}
+    - {name: "Track 12", fileType: "audio", link: "Achievement_Tests/Achievement_Test_Audio/EU2e_TRC1_FT01.mp3"}
+    - {name: "Track 13", fileType: "audio", link: "Achievement_Tests/Achievement_Test_Audio/EU2e_TRC1_FT02.mp3"}
 
-cyl:
-  name: Cambridge Young Learners
+yle:
+  name: Young Learners English
   description: An optional description can go here. There's technically no limit to the length, but I would advise keeping short. Perhaps I could implement the 'read more' functionality. Would need Bootstrap though.
-  link: cyl
+  link: yle
   hierarchy: 1
   includeOnHome: true
   files:
-    - {name: "Correlation Guide", fileType: "pdf", link: "placeholder"}
-    - {name: "Starters Test 1", fileType: "folder", link: "cyl-test-1"}
-    - {name: "Starters Test 2", fileType: "folder", link: "placeholder"}
-    - {name: "Starters Test 3", fileType: "folder", link: "placeholder"}
-    - {name: "Starters Test 4", fileType: "folder", link: "placeholder"}
-    - {name: "Starters Vocabulary List", fileType: "pdf", link: "placeholder"}
-    - {name: "Starters  Introduction and Tips", fileType: "pdf", link: "placeholder"}
-    - {name: "Track List", fileType: "pdf", link: "placeholder"}
-    - {name: "Download all Audio", fileType: "zip", link: "placeholder"}
-    - {name: "YLE Speaking Object Cards ", fileType: "pdf", link: "placeholder"}
-    - {name: "YLE Speaking Instructions", fileType: "pdf", link: "placeholder"}
+    - {name: "Correlation Guide", fileType: "pdf", link: "YLE_Practice_Tests/YLE_Starters_PDF/YLE_correlation.pdf"}
+    - {name: "Starters Test 1", fileType: "folder", link: "yle-test-1"}
+    - {name: "Starters Test 2", fileType: "folder", link: "yle-test-2"}
+    - {name: "Starters Test 3", fileType: "folder", link: "yle-test-3"}
+    - {name: "Starters Test 4", fileType: "folder", link: "yle-test-4"}
+    - {name: "Starters Vocabulary List", fileType: "pdf", link: "YLE_Practice_Tests/YLE_Starters_PDF/YLE_Starters_Vocabulary_List.pdf"}
+    - {name: "Starters Introduction and Tips", fileType: "pdf", link: "YLE_Practice_Tests/YLE_Starters_PDF/YLE_Starters_Introduction_and_Tips.pdf"}
+    - {name: "Download all Audio", fileType: "zip", link: "YLE_Practice_Tests/placeholder"}
+    - {name: "YLE Speaking Object Cards ", fileType: "pdf", link: "YLE_Practice_Tests/YLE_TRC1_SpeakingObjectCards.pdf"}
+    - {name: "YLE Speaking Instructions", fileType: "pdf", link: "YLE_Practice_Tests/YLE_TRC1_SpeakingInstructions.pdf"}
 
-cyl-1:
+yle-test-1:
   name: Starters Test 1
-  longName: "Cambridge Young Learners: Starters Test 1"
+  longName: "Young Learners English: Starters Test 1"
   hierarchy: 2
-  link: cyl-test-1
+  link: yle-test-1
   files:
-    - {name: "Starters Test 1: Listening", fileType: "doc", link: "CYL_Starters_Test_1_Listening.doc"}
-    - {name: "Starters Test 1: Listening", fileType: "pdf", link: "CYL_Starters_Test_1_Listening.pdf"}
-    - {name: "Listening: Part 1 Example", fileType: "audio", link: "13_S1_Part1_example.mp3"}
-    - {name: "Listening: Part 1 Exercise", fileType: "audio", link: "14_S1_Part1_exercise.mp3"}
-    - {name: "Listening: Part 2 Example", fileType: "audio", link: "15_S1_Part2_example.mp3"}
-    - {name: "Listening: Part 2 Exercise", fileType: "audio", link: "16_S1_Part2_exercise.mp3"}
-    - {name: "Listening: Part 3 Example", fileType: "audio", link: "17_S1_Part3_example.mp3"}
-    - {name: "Listening: Part 3 Exercise", fileType: "audio", link: "18_S1_Part3_exercise.mp3"}
-    - {name: "Listening: Part 4 Example", fileType: "audio", link: "19_S1_Part4_example.mp3"}
-    - {name: "Listening: Part 4 Exercise", fileType: "audio", link: "20_S1_Part4_exercise.mp3"}
-    - {name: "Starters Test 1: Reading and Writing", fileType: "doc", link: "CYL_Starters_Test_1_ReadingWriting.doc"}
-    - {name: "Starters Test 1: Reading and Writing", fileType: "pdf", link: "CYL_Starters_Test_1_ReadingWriting.pdf"}
-    - {name: "Starters Test 1: Speaking", fileType: "doc", link: "CYL_Starters_Test_1_Speaking.doc"}
-    - {name: "Starters Test 1: Speaking", fileType: "pdf", link: "CYL_Starters_Test_1_Speaking.pdf"}
-    - {name: "Starters Test 1: Answer Key", fileType: "pdf", link: "CYL_Starters_Test_1_teachers_notes.pdf"}
+    - {name: "Starters Test 1: Listening", fileType: "pdf", link: "YLE_Practice_Tests/YLE_Starters_PDF/Starters_Test_1/YLE_Starters_Test_1_Listening.pdf"}
+    - {name: "Starters Test 1: Listening", fileType: "doc", link: "YLE_Practice_Tests/YLE_Starters_Word/Starters_Test_1/YLE_Starters_Test_1_Listening.doc"}
+    - {name: "Listening: Part 1 Example", fileType: "audio", link: "YLE_Practice_Tests/YLE_Audio/YLE_Starters_audio_test_1/S1_Part1_example.mp3"}
+    - {name: "Listening: Part 1 Exercise", fileType: "audio", link: "YLE_Practice_Tests/YLE_Audio/YLE_Starters_audio_test_1/S1_Part1_exercise.mp3"}
+    - {name: "Listening: Part 2 Example", fileType: "audio", link: "YLE_Practice_Tests/YLE_Audio/YLE_Starters_audio_test_1/S1_Part2_example.mp3"}
+    - {name: "Listening: Part 2 Exercise", fileType: "audio", link: "YLE_Practice_Tests/YLE_Audio/YLE_Starters_audio_test_1/S1_Part2_exercise.mp3"}
+    - {name: "Listening: Part 3 Example", fileType: "audio", link: "YLE_Practice_Tests/YLE_Audio/YLE_Starters_audio_test_1/S1_Part3_example.mp3"}
+    - {name: "Listening: Part 3 Exercise", fileType: "audio", link: "YLE_Practice_Tests/YLE_Audio/YLE_Starters_audio_test_1/S1_Part3_exercise.mp3"}
+    - {name: "Listening: Part 4 Example", fileType: "audio", link: "YLE_Practice_Tests/YLE_Audio/YLE_Starters_audio_test_1/S1_Part4_example.mp3"}
+    - {name: "Listening: Part 4 Exercise", fileType: "audio", link: "YLE_Practice_Tests/YLE_Audio/YLE_Starters_audio_test_1/S1_Part4_exercise.mp3"}
+    - {name: "Starters Test 1: Reading and Writing", fileType: "doc", link: "YLE_Practice_Tests/YLE_Starters_Word/Starters_Test_1/YLE_Starters_Test_1_ReadingWriting.doc"}
+    - {name: "Starters Test 1: Reading and Writing", fileType: "pdf", link: "YLE_Practice_Tests/YLE_Starters_PDF/Starters_Test_1/YLE_Starters_Test_1_ReadingWriting.pdf"}
+    - {name: "Starters Test 1: Speaking", fileType: "doc", link: "YLE_Practice_Tests/YLE_Starters_Word/Starters_Test_1/YLE_Starters_Test_1_Speaking.doc"}
+    - {name: "Starters Test 1: Speaking", fileType: "pdf", link: "YLE_Practice_Tests/YLE_Starters_PDF/Starters_Test_1/YLE_Starters_Test_1_Speaking.pdf"}
+    - {name: "Starters Test 1: Answer Key", fileType: "pdf", link: "YLE_Practice_Tests/YLE_Starters_PDF/Starters_Test_1/YLE_Starters_Test_1_AK_TN.pdf"}
 
-cyl-2:
+yle-test-2:
   name: Starters Test 2
+  longName: "Young Learners English: Starters Test 2"
   hierarchy: 2
-  link: placeholder
+  link: yle-test-2
+  files:
+    - {name: "Starters Test 2: Listening", fileType: "pdf", link: "YLE_Practice_Tests/YLE_Starters_PDF/Starters_Test_2/YLE_Starters_Test_2_Listening.pdf"}
+    - {name: "Starters Test 2: Listening", fileType: "doc", link: "YLE_Practice_Tests/YLE_Starters_Word/Starters_Test_2/YLE_Starters_Test_2_Listening.doc"}
+    - {name: "Listening: Part 1 Example", fileType: "audio", link: "YLE_Practice_Tests/YLE_Audio/YLE_Starters_audio_test_2/S1_Part1_example.mp3"}
+    - {name: "Listening: Part 1 Exercise", fileType: "audio", link: "YLE_Practice_Tests/YLE_Audio/YLE_Starters_audio_test_2/S1_Part1_exercise.mp3"}
+    - {name: "Listening: Part 2 Example", fileType: "audio", link: "YLE_Practice_Tests/YLE_Audio/YLE_Starters_audio_test_2/S1_Part2_example.mp3"}
+    - {name: "Listening: Part 2 Exercise", fileType: "audio", link: "YLE_Practice_Tests/YLE_Audio/YLE_Starters_audio_test_2/S1_Part2_exercise.mp3"}
+    - {name: "Listening: Part 3 Example", fileType: "audio", link: "YLE_Practice_Tests/YLE_Audio/YLE_Starters_audio_test_2/S1_Part3_example.mp3"}
+    - {name: "Listening: Part 3 Exercise", fileType: "audio", link: "YLE_Practice_Tests/YLE_Audio/YLE_Starters_audio_test_2/S1_Part3_exercise.mp3"}
+    - {name: "Listening: Part 4 Example", fileType: "audio", link: "YLE_Practice_Tests/YLE_Audio/YLE_Starters_audio_test_2/S1_Part4_example.mp3"}
+    - {name: "Listening: Part 4 Exercise", fileType: "audio", link: "YLE_Practice_Tests/YLE_Audio/YLE_Starters_audio_test_2/S1_Part4_exercise.mp3"}
+    - {name: "Starters Test 2: Reading and Writing", fileType: "doc", link: "YLE_Practice_Tests/YLE_Starters_Word/Starters_Test_2/YLE_Starters_Test_2_ReadingWriting.doc"}
+    - {name: "Starters Test 2: Reading and Writing", fileType: "pdf", link: "YLE_Practice_Tests/YLE_Starters_PDF/Starters_Test_2/YLE_Starters_Test_2_ReadingWriting.pdf"}
+    - {name: "Starters Test 2: Speaking", fileType: "doc", link: "YLE_Practice_Tests/YLE_Starters_Word/Starters_Test_2/YLE_Starters_Test_2_Speaking.doc"}
+    - {name: "Starters Test 2: Speaking", fileType: "pdf", link: "YLE_Practice_Tests/YLE_Starters_PDF/Starters_Test_2/YLE_Starters_Test_2_Speaking.pdf"}
+    - {name: "Starters Test 2: Answer Key", fileType: "pdf", link: "YLE_Practice_Tests/YLE_Starters_PDF/Starters_Test_2/YLE_Starters_Test_2_AK_TN.pdf"}
 
-cyl-3:
+yle-test-3:
   name: Starters Test 3
+  longName: "Young Learners English: Starters Test 3"
   hierarchy: 2
-  link: placeholder
+  link: yle-test-3
+  files:
+    - {name: "Starters Test 3: Listening", fileType: "pdf", link: "YLE_Practice_Tests/YLE_Starters_PDF/Starters_Test_3/YLE_Starters_Test_3_Listening.pdf"}
+    - {name: "Starters Test 3: Listening", fileType: "doc", link: "YLE_Practice_Tests/YLE_Starters_Word/Starters_Test_3/YLE_Starters_Test_3_Listening.doc"}
+    - {name: "Listening: Part 1 Example", fileType: "audio", link: "YLE_Practice_Tests/YLE_Audio/YLE_Starters_audio_test_3/S1_Part1_example.mp3"}
+    - {name: "Listening: Part 1 Exercise", fileType: "audio", link: "YLE_Practice_Tests/YLE_Audio/YLE_Starters_audio_test_3/S1_Part1_exercise.mp3"}
+    - {name: "Listening: Part 2 Example", fileType: "audio", link: "YLE_Practice_Tests/YLE_Audio/YLE_Starters_audio_test_3/S1_Part2_example.mp3"}
+    - {name: "Listening: Part 2 Exercise", fileType: "audio", link: "YLE_Practice_Tests/YLE_Audio/YLE_Starters_audio_test_3/S1_Part2_exercise.mp3"}
+    - {name: "Listening: Part 3 Example", fileType: "audio", link: "YLE_Practice_Tests/YLE_Audio/YLE_Starters_audio_test_3/S1_Part3_example.mp3"}
+    - {name: "Listening: Part 3 Exercise", fileType: "audio", link: "YLE_Practice_Tests/YLE_Audio/YLE_Starters_audio_test_3/S1_Part3_exercise.mp3"}
+    - {name: "Listening: Part 4 Example", fileType: "audio", link: "YLE_Practice_Tests/YLE_Audio/YLE_Starters_audio_test_3/S1_Part4_example.mp3"}
+    - {name: "Listening: Part 4 Exercise", fileType: "audio", link: "YLE_Practice_Tests/YLE_Audio/YLE_Starters_audio_test_3/S1_Part4_exercise.mp3"}
+    - {name: "Starters Test 3: Reading and Writing", fileType: "doc", link: "YLE_Practice_Tests/YLE_Starters_Word/Starters_Test_3/YLE_Starters_Test_3_ReadingWriting.doc"}
+    - {name: "Starters Test 3: Reading and Writing", fileType: "pdf", link: "YLE_Practice_Tests/YLE_Starters_PDF/Starters_Test_3/YLE_Starters_Test_3_ReadingWriting.pdf"}
+    - {name: "Starters Test 3: Speaking", fileType: "doc", link: "YLE_Practice_Tests/YLE_Starters_Word/Starters_Test_3/YLE_Starters_Test_3_Speaking.doc"}
+    - {name: "Starters Test 3: Speaking", fileType: "pdf", link: "YLE_Practice_Tests/YLE_Starters_PDF/Starters_Test_3/YLE_Starters_Test_3_Speaking.pdf"}
+    - {name: "Starters Test 3: Answer Key", fileType: "pdf", link: "YLE_Practice_Tests/YLE_Starters_PDF/Starters_Test_3/YLE_Starters_Test_3_AK_TN.pdf"}
 
-cyl-4:
+yle-test-4:
   name: Starters Test 4
+  longName: "Young Learners English: Starters Test 4"
   hierarchy: 2
-  link: placeholder
-
-worksheets:
-  name: Worksheets
-  link: worksheets
-  hierarchy: 1
-  includeOnHome: true
+  link: yle-test-4
+  files:
+    - {name: "Starters Test 4: Listening", fileType: "pdf", link: "YLE_Practice_Tests/YLE_Starters_PDF/Starters_Test_4/YLE_Starters_Test_4_Listening.pdf"}
+    - {name: "Starters Test 4: Listening", fileType: "doc", link: "YLE_Practice_Tests/YLE_Starters_Word/Starters_Test_4/YLE_Starters_Test_4_Listening.doc"}
+    - {name: "Listening: Part 1 Example", fileType: "audio", link: "YLE_Practice_Tests/YLE_Audio/YLE_Starters_audio_test_4/S1_Part1_example.mp3"}
+    - {name: "Listening: Part 1 Exercise", fileType: "audio", link: "YLE_Practice_Tests/YLE_Audio/YLE_Starters_audio_test_4/S1_Part1_exercise.mp3"}
+    - {name: "Listening: Part 2 Example", fileType: "audio", link: "YLE_Practice_Tests/YLE_Audio/YLE_Starters_audio_test_4/S1_Part2_example.mp3"}
+    - {name: "Listening: Part 2 Exercise", fileType: "audio", link: "YLE_Practice_Tests/YLE_Audio/YLE_Starters_audio_test_4/S1_Part2_exercise.mp3"}
+    - {name: "Listening: Part 3 Example", fileType: "audio", link: "YLE_Practice_Tests/YLE_Audio/YLE_Starters_audio_test_4/S1_Part3_example.mp3"}
+    - {name: "Listening: Part 3 Exercise", fileType: "audio", link: "YLE_Practice_Tests/YLE_Audio/YLE_Starters_audio_test_4/S1_Part3_exercise.mp3"}
+    - {name: "Listening: Part 4 Example", fileType: "audio", link: "YLE_Practice_Tests/YLE_Audio/YLE_Starters_audio_test_4/S1_Part4_example.mp3"}
+    - {name: "Listening: Part 4 Exercise", fileType: "audio", link: "YLE_Practice_Tests/YLE_Audio/YLE_Starters_audio_test_4/S1_Part4_exercise.mp3"}
+    - {name: "Starters Test 4: Reading and Writing", fileType: "doc", link: "YLE_Practice_Tests/YLE_Starters_Word/Starters_Test_4/YLE_Starters_Test_4_ReadingWriting.doc"}
+    - {name: "Starters Test 4: Reading and Writing", fileType: "pdf", link: "YLE_Practice_Tests/YLE_Starters_PDF/Starters_Test_4/YLE_Starters_Test_4_ReadingWriting.pdf"}
+    - {name: "Starters Test 4: Speaking", fileType: "doc", link: "YLE_Practice_Tests/YLE_Starters_Word/Starters_Test_4/YLE_Starters_Test_4_Speaking.doc"}
+    - {name: "Starters Test 4: Speaking", fileType: "pdf", link: "YLE_Practice_Tests/YLE_Starters_PDF/Starters_Test_4/YLE_Starters_Test_4_Speaking.pdf"}
+    - {name: "Starters Test 4: Answer Key", fileType: "pdf", link: "YLE_Practice_Tests/YLE_Starters_PDF/Starters_Test_4/YLE_Starters_Test_4_AK_TN.pdf"}
 
 project:
   name: Project Resources
   link: project-resources
   hierarchy: 1
   includeOnHome: true
+  files:
+    - {name: "Project 3", fileType: "pdf", link: "Project_Resources/EU2e_TRC1_ProjectPage3.pdf"}
+
+worksheets:
+  name: Worksheets
+  link: worksheets
+  hierarchy: 1
+  includeOnHome: true
+  files:
+    - {name: "Worksheet Instructions", fileType: "pdf", link: "Worksheets/EU2e_TRC1_WorksheetInstructions.pdf"}
+    - {name: "Worksheet Instructions", fileType: "pdf", link: "Worksheets/EU2e_TRC1_WorksheetInstructions.pdf"}
+    - {name: "Unit 1 Lesson 3 Worksheet", fileType: "pdf", link: "Worksheets/EU2e_TRC1_Unit1Lesson3_WKST.pdf"}
+    - {name: "Unit 1 Lesson 4 Worksheet", fileType: "pdf", link: "Worksheets/EU2e_TRC1_Unit1Lesson4_WKST.pdf"}
+    - {name: "Unit 2 Lesson 3 Worksheet", fileType: "pdf", link: "Worksheets/EU2e_TRC1_Unit2Lesson3_WKST.pdf"}
+    - {name: "Unit 2 Lesson 4 Worksheet", fileType: "pdf", link: "Worksheets/EU2e_TRC1_Unit2Lesson4_WKST.pdf"}
+    - {name: "Unit 3 Lesson 3 Worksheet", fileType: "pdf", link: "Worksheets/EU2e_TRC1_Unit3Lesson3_WKST.pdf"}
+    - {name: "Unit 3 Lesson 4 Worksheet", fileType: "pdf", link: "Worksheets/EU2e_TRC1_Unit3Lesson4_WKST.pdf"}
+    - {name: "Unit 4 Lesson 3 Worksheet", fileType: "pdf", link: "Worksheets/EU2e_TRC1_Unit4Lesson3_WKST.pdf"}
+    - {name: "Unit 4 Lesson 4 Worksheet", fileType: "pdf", link: "Worksheets/EU2e_TRC1_Unit4Lesson4_WKST.pdf"}
+    - {name: "Unit 5 Lesson 3 Worksheet", fileType: "pdf", link: "Worksheets/EU2e_TRC1_Unit5Lesson3_WKST.pdf"}
+    - {name: "Unit 5 Lesson 4 Worksheet", fileType: "pdf", link: "Worksheets/EU2e_TRC1_Unit5Lesson4_WKST.pdf"}
+    - {name: "Unit 6 Lesson 3 Worksheet", fileType: "pdf", link: "Worksheets/EU2e_TRC1_Unit6Lesson3_WKST.pdf"}
+    - {name: "Unit 6 Lesson 4 Worksheet", fileType: "pdf", link: "Worksheets/EU2e_TRC1_Unit6Lesson4_WKST.pdf"}
+    - {name: "Unit 7 Lesson 3 Worksheet", fileType: "pdf", link: "Worksheets/EU2e_TRC1_Unit7Lesson3_WKST.pdf"}
+    - {name: "Unit 7 Lesson 4 Worksheet", fileType: "pdf", link: "Worksheets/EU2e_TRC1_Unit7Lesson4_WKST.pdf"}
+    - {name: "Unit 8 Lesson 3 Worksheet", fileType: "pdf", link: "Worksheets/EU2e_TRC1_Unit8Lesson3_WKST.pdf"}
+    - {name: "Unit 8 Lesson 4 Worksheet", fileType: "pdf", link: "Worksheets/EU2e_TRC1_Unit8Lesson4_WKST.pdf"}
