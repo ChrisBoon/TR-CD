@@ -1,3 +1,8 @@
-$c-eu2e-level-1-main: #a865a3;
-$c-hover-color: rgba($c-eu2e-level-1-main,0.12);
-$c-button-1: $c-eu2e-level-1-main;
+//change this HEX code to set main accent color used throughout:
+$c-course-color-1: #a865a3;
+
+//adjust the decimal value here if you want to make the hover state of menu items darker or lighter:
+$c-hover-color: rgba($c-course-color-1,0.12);
+
+//sets the color for Terms and Condition acceptance button - unless you need it to be different suggest keeping it to course color as here.
+$c-button-1: $c-course-color-1;

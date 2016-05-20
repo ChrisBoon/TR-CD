@@ -1,3 +1,8 @@
+//sets content max-width - probably don't hange this unless UX suggests currently content can get too wide or not wide enough:
 $max-width: $unit*140;
+//sets the width of the sidebar. Could eventually remove or switch to a non-fixed value but would require further css changes.
+//suggest leaving alone unless a course needs a wider sidebar.
 $sidebar-width: 300px;
+
+//color used occassionally as a fallback in case a course forgets to style something - no real need to change it:
 $c-tr-cd-placeholder-1: #147770;
