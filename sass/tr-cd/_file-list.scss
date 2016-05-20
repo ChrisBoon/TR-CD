@@ -39,6 +39,7 @@
 	padding: $unit;
 	display: none;
 	.file-list__item--is-open &{
+		display: block;
 		display: flex;
 	}
 }
@@ -52,8 +53,9 @@
 .file-list__audio-container{
 	flex: 4 0 auto;
 	padding-right: $unit*2;
+	display: flex;
 }
 .file-list__audio{
 	display: block;
-	width: 100%;
+	flex: 1 0 auto;
 }
