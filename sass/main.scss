@@ -1,3 +1,5 @@
+//recommend you only change styles and variables in the 'course-specific' subfolder, unless fixing bugs or intentionally making 'platform' changes.
+
 @import "elt-ny/utils/_mixins";
 @import "elt-ny/utils/_media-queries";
 
@@ -34,4 +36,4 @@
 @import "elt-ny/sections/_footer";
 
 
-@import "course-specific/_eu2e";
+@import "course-specific/_styles";

@@ -1,0 +1,126 @@
+////HOMEPAGE
+//////homepage - customizing generics (meaning these are elements that appear on all pages and we are only changing on the homepage):
+.homepage{
+//for EU2e we decided to not have the header visible on the homepage but still need the hamburger menu.
+//the code below just changes the background to white and adjusts the hamburger colors.
+  .app__header{
+    background:#fff;
+  }
+  .hamburger-menu{
+    background-color: #333;
+    &:before,
+    &:after{
+      background-color: #333;
+    }
+  }
+  //EU2e also makes a few changes to some other elements specifically on the homepage:
+  //the item list is surrounded by the level color instead of a light grey:
+  .color-container{
+    background-color: $c-course-color-1;
+    padding: $unit*2 0;
+  }
+  //some spacing is adjusted:
+  .file-list{
+    margin-top: 0;
+  }
+  .page-footer{
+    margin-top: 0;
+  }
+  //the Shaping Learning Together triangle needs to match the color of the section above it:
+  .logo-holder:before{
+    border-top: 8px solid $c-course-color-1;
+  }
+}
+
+//////homepage - specifc stuff:
+
+//div that holds the logo and component title:
+.hero-header__container{
+  background:#fff;
+  padding-bottom: $unit;
+}
+
+//the logo:
+.logo-img-title {
+    max-height: 140px;
+    display: block;
+    margin: 0 auto;
+}
+
+//the main component title (eg. Teacher Resource Centre)
+.product-info__title {
+  margin-top: 0.4em;
+  font-size: 1.6em;
+  color: $c-course-color-1;
+  text-align: center;
+}
+
+//a sub title (eg Level 1) - comment out the HTML in index.html if you don't need this to appear for your Course:
+.product-info__title--sub {
+  font-size: 1.2em;
+  color: $c-course-color-1;
+  text-align: center;
+}
+
+////EU2E scrolling banner
+//everything in this section is just for the EU2e banner - suggest you remove if making a different course:
+.eu2e-specific-banner-image{
+  height: 298px;
+  position: relative;
+  overflow: hidden;
+  &:before{
+    position: absolute;
+    display: block;
+    content: "";
+    height: 100%;
+    width: 6226px;
+    background-image: url(../images/course-specific/scene2.png);
+    background-repeat: repeat-x;
+    background-position: 0 -1px;
+    top: 0;
+    left: 0;
+    animation: movingBG2 90s infinite linear;
+  }
+  @at-root{
+    @keyframes movingBG{
+      to{
+        background-position: 0 0;
+      }
+    }
+  }
+  @at-root{
+    @keyframes movingBG2{
+      to{
+        transform: translateX(-3113px);
+      }
+    }
+  }
+}
+
+
+//here we set the header bar BG color throughout the app
+//generally it will want to be the level color
+// if the chosen color is light you may need to switch the text color to $base-text-color or some other dark color 
+.app__header{
+  background-color: $c-course-color-1;
+}
+
+
+//sidebar colors. You can probably leave this alone as changing the variable should suffice. If needed though you can tweak the colors:
+.sidebar-nav__link{
+  &--is-open{
+    color: $c-course-color-1;
+    background-color: rgba($c-course-color-1,0.3);
+  }
+  &:hover{
+    color: $c-course-color-1;
+  }
+}
+
+//t&c modal backdrop. You can probably leave this alone as changing the variable should suffice. If needed though you can tweak the colors:
+.modal-backdrop {
+  background-color: $c-course-color-1;
+  &.in{
+    opacity: 0.7;
+  }
+}
