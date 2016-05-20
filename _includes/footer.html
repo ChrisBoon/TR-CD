@@ -1,3 +1,4 @@
+{% assign appData = site.data.appDefaults[0] %}
     <div class="page-footer">
       <div class="slt-banner">
         <div class="logo-holder">
@@ -6,10 +7,10 @@
       </div>
       <div class="footer__oup-content">
         <a class="logo-oup-a" href="https://elt.oup.com/" target="_blank">
-          <img src="{{base}}images/logo-OUP.svg" alt="Oxford University Press" class="logo-oup">
+          <img src="{{base}}images/logo-OUP.svg" alt="Oxford University Press" class="logo-oup" width="160">
         </a>
         <div class="boring-footer-stuff">
-          <p class="copyright-line">Copyright © Oxford University Press, 2016. All Rights Reserved.</p>
+          <p class="copyright-line">Copyright © Oxford University Press, {{appData.copyrightYear}}. All Rights Reserved.</p>
         </div>
       </div>
     </div>
