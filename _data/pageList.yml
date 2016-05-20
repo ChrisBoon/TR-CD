@@ -1,3 +1,74 @@
+# The data in this page is used to generate all the structure of the pages and navigation
+# Each OBJECT matches a page. 
+  # Each OBJECT also appears as a link in the sidebar.
+  # It is not currently possible to create a page and hide it from the sidebar.
+  # The order of the OBJECTs in the file equals the order they will appear in the Sidebar (or anywhere else they appear).
+  # the OBJECT KEY must match the 'list' VALUE in the corresponding Markdown post.
+
+# Each OBJECT must have a 'name' KEY with a VALUE.
+  # The VALUE is the text that will appear as the text wherever it is used as a link - eg in the Sidebar.
+  # The VALUE will also be used as the title on the page (unless a 'longName' VALUE is also provided)
+  # The value can contain spaces and capital letters - it is a human-readable item.
+
+# Each OBJECT can optionally include a 'longName' KEY VALUE pair.
+  # The VALUE would be the title that appears when viewing its page, instead of the default 'name' VALUE.
+    # This allows you to supply a short name when used as a link, but provide more context on the page.
+
+# Each OBJECT can optionally include a 'description' KEY VALUE pair.
+  # The VALUE will appear as text below the title when viewing the objects page.
+    # The VALUE will render as plain text so can obly include text, nt html. Meaning you can't include line breaks, italics, bold text, etc.
+      # If more sophisticated content is required here we will need to adjust the templates.
+
+# Each OBJECT must have a 'link' KEY with a VALUE.
+  # There is one exception - the home item has a KEY with an empty VALUE. This is intentional, don't change it.
+  # The 'link' is the URL that will be added whenever the OBJECT is used to create a link.
+  # The link must match the Markdown post filename, but without the date prefix or file extension - eg if the Markdown post is '2016-01-01-foo-bar.md' the 'link' VALUE would be 'foo-bar' (without the quotes).
+    # Note the Markdown post does still need creating - setting up the data in this file does not create the physical file.
+
+# Each OBJECT must have a 'hierarchy' KEY with a VALUE.
+  # The value must be 1 or 2
+  # If the page is intended to be a major section the value should be 1. This will bold the text in the Sidebar and but a line above it.
+  # If the page is a 'subpage' of a section the value should be 2. The text in the sidebar will be lighter and there will be no line separating it.
+
+# The 'home' OBJECT must have the 'special' KEY with a value of TRUE.
+  # I honestly don't remember why.
+
+# For a page to be linked from the homepage it must include the KEY 'includeOnHome' with a VALUE of true.
+  # Pages that aren't linked to from the homepage can omit this KEY and VALUE entirely or include the KEY with a VALUE of false.
+  # I recommend omitting entirely for brevity.
+
+# Each page except the homepage must include a 'files' KEY.
+  # The VALUE of the KEY is an ARRAY of OBJECTS.
+  # Each OBJECT relates to one 'link' or 'list item' on the page.
+    # Each OBJECT must have three KEY VALUE pairs:
+      # The 'name' VALUE is the text that will be used for the link.
+      # The 'fileType' VALUE specifies the icon type and also the functionality of each link.
+        # There are five possible VALUEs for the 'fileType' key: "pdf", "audio", "doc", "folder", "zip":
+          # "folder" creates a standard URL link - you use this for creating sub-pages in a section.
+          # "doc" creates a standard link - all browsers will download the file as none can natively open it.
+          # "zip" creates a standard link - all browsers will download the file as none can natively open it.
+          # "pdf" creates a link using the 'download' attribute. Modern browsers download the file, whereas older ones will open it in a new tab.
+          # "audio" creates the dropdown unctionality that includes an HTML audio element embedded on the page, and a link using the 'download' attribute.
+        # If creating a product that requires more fileTypes - spreadsheet, video, etc - development work will need to be done to the templates. Don't try to use one of the existing ones to cover it as icon type and functionality could confuse a user.
+
+# Notes on YAML
+  # Indentation is important - make sure you keep indentation as in the code below.
+    # For example the 'home' OBJECT is not indented as it is a top level item. However the next line, 'name: Home', is indented. This says it is inside the home OBJECT.
+    # If it was not indented the code would see it as a sibling of the home OBJECT
+
+  # Line breaks are not important - I just included them between each page to make it easier to read.
+
+  # KEYS never have quotes around them.
+
+  # VALUES usually don't need quotes.
+    # There are some exceptions, which you will see in the code below:
+      # If the VALUE includes a colon you should wrap the VALUE in quotes, otherwise the YAML will think the colon is the end of the VALUE.
+      # If several KEY VALUE pairs are on one line (as I did them in the 'files' OBJECTs) the VALUEs need wrapping in quotes so the code knows the commas are not part of the VALUE.
+    # If you prefer you can wrap all VALUEs in quotes for consistency EXCEPT any where the VALUE is 'true', 'false', or a number - these should never be wrapped in quotes.
+  # You can easily check the YAML is valid online - here is a good validator: http://www.yamllint.com/
+  # You don't need to use YAML - this file can be converted to JSON if you prefer working in that format. Just use something like this service http://yamltojson.com/ and save as 'pageList.json' in this folder, deleting this file.
+    # However JSON does not support comments so you will need to move all the above text to a readme file.
+
 home:
   name: Home
   link: 

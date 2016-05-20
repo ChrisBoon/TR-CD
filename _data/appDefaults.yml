@@ -1,5 +1,20 @@
-- seriesTitle: Everybody Up
-  componentTitle: Teacher's Resource Center
-  productLevel: Level 1
+- homePageLogoAltText: Everybody Up
+  homePageComponentTitle: Teacher's Resource Center
+  homePageComponentLevel: Level 1
   appHeaderTitle: Teacher's Resource Center
-  extendedTitle: Everybody Up 2nd Edition Teacher's Resource Center Level 1
+  htmlTitle: Everybody Up 2nd Edition Teacher Resources
+  cssCode: eu2e
+  termsCourseName: Everybody Up
+  termsComponentName: Teacher's Resource Center
+  copyrightYear: 2016
+
+# Explanation of usage:
+# homePageLogoAltText: used as Alt Text for the logo on the homepage (found in index.html)
+# homePageComponentTitle: Appears below the logo on the homepage (found in index.html)
+# homePageComponentLevel: OPTIONAL: Appears below the logo on the homepage (found in index.html)
+# appHeaderTitle: The title that appears in the header bar on pages where the header bar displays
+# htmlTitle: the 'title' element - the text that appears in the browser tab.
+# cssCode: not used right now, but could be added if you need to do more customization of styles - would need adding to templates though.
+# termsCourseName: used in the Terms and Conditions. Ideally you would only need to change the two strings in here but if the legal text needs updating you will need to edit the 'terms.html' file in the '_includes' folder.
+# termsComponentName: used in the Terms and Conditions Ideally you would only need to change the two strings in here but if the legal text needs updating you will need to edit the 'terms.html' file in the '_includes' folder.
+# copyrightYear: Used in the page footer to set the copyright year. In a live website we would use JS to keep this up to current year, but for physical media probably safer to keep year as publication date.
