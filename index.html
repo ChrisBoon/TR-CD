@@ -5,13 +5,15 @@ list: pageList
 hideHeaderTitle: true
 permalink: index.html
 ---
-<!-- Content is specific to a product/course. Below is EU2E content. Remove below if reusing this template -->
+<!-- Content is specific to a product/course. Below is EU2E content. Remove/adjust below if reusing this template for other courses-->
 {% assign appData = site.data.appDefaults[0] %}
+
+<!-- The logo and product name - probably every course will want to keep this.-->
   <div class="hero-header__container">
-    <img class="eu2e-title" src="{{base}}images/course-specific/eu2e-logo-1x.jpg" alt="Everybody Up">
-    <h1 class="product-info__title">{{appData.componentTitle}}</h1>
+    <img class="logo-img-title" src="{{base}}images/course-specific/logo-1x.jpg" alt="{{appData.homePageLogoAltText}}">
+    <h1 class="product-info__title">{{appData.homePageComponentTitle}}</h1>
+    <h2 class="product-info__title--sub">{{appData.homePageComponentLevel}}</h2>
   </div>
 
-  <div class= "eu2e-specific-banner-image">
-
-  </div>
+<!-- EU2E specific scrolling banner - mostly handled by CSS. For other courses you will probably want to delete this.-->
+  <div class= "eu2e-specific-banner-image"></div>
