@@ -1,8 +1,5 @@
-console.log("i'm working!");
-
-var productIdentifier = "trcdv1";
-
 $(document).ready(function(){
+
   var $els = {
  	body: $("body"),
  	sidebarActivate: $(".sidebar-activate"),
@@ -71,7 +68,7 @@ $(document).ready(function(){
 					$els.termsModal.modal('show');
 				}
 				else{
-					console.log("terms already accepted!")
+					// console.log("terms already accepted! To 'unaccept' run: '$.jStorage.flush()' in console ");
 				}
 			}
 		},
@@ -80,6 +77,7 @@ $(document).ready(function(){
 			$els.termsModal.modal('hide');
 		}
 	}
+
 	terms.init();
 	//homepage specific:
 
@@ -95,7 +93,6 @@ $(document).ready(function(){
   $els.audioLink.on("click keydown", function(e){
   	if (e.type ==='click' || e.type ==='keydown' && e.which == 13) {
   		//don't follow link:
-  		e.preventDefault();
   		//instead open the dropdown (and stop any other audio):
 	  	audioPlayer.initAudio( $(this).parent() ); 
   	}
@@ -107,7 +104,6 @@ $(document).ready(function(){
 	  	sidebar.toggleState();
   	}
   })
-
 
 
 });
